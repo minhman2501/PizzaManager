@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label2 = new System.Windows.Forms.Label();
             this.PizzaListBtn = new System.Windows.Forms.Button();
             this.DrinkListBtn = new System.Windows.Forms.Button();
@@ -124,8 +124,8 @@
             // 
             // foodGridView
             // 
-            dataGridViewCellStyle1.Padding = new System.Windows.Forms.Padding(0, 10, 0, 0);
-            this.foodGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.Padding = new System.Windows.Forms.Padding(0, 10, 0, 0);
+            this.foodGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
             this.foodGridView.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -205,7 +205,7 @@
             // 
             // cancelBtn
             // 
-            this.cancelBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.cancelBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.cancelBtn.BackColor = System.Drawing.Color.White;
             this.cancelBtn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.cancelBtn.FlatAppearance.BorderSize = 2;
@@ -217,7 +217,7 @@
             this.cancelBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.cancelBtn.IconSize = 40;
             this.cancelBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.cancelBtn.Location = new System.Drawing.Point(178, 640);
+            this.cancelBtn.Location = new System.Drawing.Point(332, 640);
             this.cancelBtn.Name = "cancelBtn";
             this.cancelBtn.Size = new System.Drawing.Size(133, 49);
             this.cancelBtn.TabIndex = 4;
@@ -257,8 +257,8 @@
             // 
             // cartGridView
             // 
-            dataGridViewCellStyle2.Padding = new System.Windows.Forms.Padding(0, 10, 0, 0);
-            this.cartGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle3.Padding = new System.Windows.Forms.Padding(0, 10, 0, 0);
+            this.cartGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
             this.cartGridView.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
