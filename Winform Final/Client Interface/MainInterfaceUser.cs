@@ -20,7 +20,9 @@ namespace Winform_Final
         public MainInterfaceUser()
         {
             InitializeComponent();
-            
+            this.WindowState = FormWindowState.Maximized;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Sizable;
+
             userHome = new HomeScreen() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
             menu = new PizzaMenu() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
             this.wrapperPanel.Controls.Add(userHome);

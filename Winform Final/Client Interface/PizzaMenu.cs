@@ -24,9 +24,14 @@ namespace Winform_Final.Client_Interface
         {
 
         }
-        //test hàm
-        
 
-        
+        private void testBtn_Click(object sender, EventArgs e)
+        {
+            
+        }
+        //test hàm
+
+
+
     }
 }
