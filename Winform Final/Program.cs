@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Winform_Final.Client_Interface;
 using Winform_Final.Administrator_Interfaces;
-using Winform_Final.Global;
+using Winform_Final.Interfaces.Global;
 
 namespace Winform_Final
 {
@@ -19,7 +19,7 @@ namespace Winform_Final
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new MainInterfaceUser());
+            Application.Run(new Bill_Interface());
         }
     }
 }

@@ -75,12 +75,6 @@
     <Compile Include="Interfaces\Client Interface\HomeScreen.Designer.cs">
       <DependentUpon>HomeScreen.cs</DependentUpon>
     </Compile>
-    <Compile Include="Interfaces\Client Interface\Item.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Interfaces\Client Interface\Item.Designer.cs">
-      <DependentUpon>Item.cs</DependentUpon>
-    </Compile>
     <Compile Include="Interfaces\Client Interface\MainInterfaceUser.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -94,6 +88,12 @@
       <DependentUpon>PizzaMenu.cs</DependentUpon>
     </Compile>
     <Compile Include="DB_Layers\DBMain.cs" />
+    <Compile Include="Interfaces\Global\Bill_Interface.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interfaces\Global\Bill_Interface.Designer.cs">
+      <DependentUpon>Bill_Interface.cs</DependentUpon>
+    </Compile>
     <Compile Include="Interfaces\Global\LoginAccount.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -123,14 +123,14 @@
     <EmbeddedResource Include="Interfaces\Client Interface\HomeScreen.resx">
       <DependentUpon>HomeScreen.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Interfaces\Client Interface\Item.resx">
-      <DependentUpon>Item.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Interfaces\Client Interface\MainInterfaceUser.resx">
       <DependentUpon>MainInterfaceUser.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Interfaces\Client Interface\PizzaMenu.resx">
       <DependentUpon>PizzaMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interfaces\Global\Bill_Interface.resx">
+      <DependentUpon>Bill_Interface.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Interfaces\Global\LoginAccount.resx">
       <DependentUpon>LoginAccount.cs</DependentUpon>

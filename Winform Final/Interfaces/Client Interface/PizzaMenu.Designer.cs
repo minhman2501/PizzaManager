@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label2 = new System.Windows.Forms.Label();
             this.PizzaListBtn = new System.Windows.Forms.Button();
             this.DrinkListBtn = new System.Windows.Forms.Button();
@@ -131,7 +131,7 @@
             this.foodGridView.RowHeadersWidth = 51;
             this.foodGridView.RowTemplate.Height = 24;
             this.foodGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.foodGridView.Size = new System.Drawing.Size(632, 150);
+            this.foodGridView.Size = new System.Drawing.Size(632, 427);
             this.foodGridView.TabIndex = 5;
             this.foodGridView.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.foodGridView_CellContentDoubleClick);
             this.foodGridView.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.foodGridView_CellDoubleClick);
@@ -286,8 +286,8 @@
             // 
             this.cartGridView.AllowUserToAddRows = false;
             this.cartGridView.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle2.Padding = new System.Windows.Forms.Padding(0, 10, 0, 0);
-            this.cartGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle4.Padding = new System.Windows.Forms.Padding(0, 10, 0, 0);
+            this.cartGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
             this.cartGridView.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
