@@ -34,7 +34,7 @@ namespace Winform_Final.Client_Interface
             {
                 dtProduct = new DataTable();
                 dtProduct.Clear();
-                foodGridView.Rows.Clear();
+                
 
                 dataset = productDatbase.getProducts();
                 productFull = productDatbase.getProductsTable();
@@ -55,7 +55,7 @@ namespace Winform_Final.Client_Interface
         }
         private void PizzaMenu_Load(object sender, EventArgs e)
         {
-
+            LoadData();
         }
 
         private void testBtn_Click(object sender, EventArgs e)
@@ -91,6 +91,7 @@ namespace Winform_Final.Client_Interface
         {
 
             int selectedIndex = foodGridView.CurrentCell.RowIndex;
+            int amount = 1;
             foreach (DataGridViewRow item in foodGridView.Rows)
             {
                 if (item.Cells["select"].Value == null)
@@ -99,18 +100,76 @@ namespace Winform_Final.Client_Interface
                 }
                 if ((bool)item.Cells[0].Value == true)
                 {
-                    int n = cartGridView.Rows.Add();
-                    cartGridView.Rows[n].Cells["cart_itemName"].Value = item.Cells[2].Value.ToString();
-                    cartGridView.Rows[n].Cells["cart_itemCategory"].Value = productFull.Tables[0].Rows[item.Index]["Category"].ToString();
-                    cartGridView.Rows[n].Cells["cart_itemPrice"].Value = item.Cells[3].Value.ToString();
+                    
+                    foreach (DataGridViewRow cart_item in cartGridView.Rows)
+                    {
+                        amount = Convert.ToInt32(cart_item.Cells["cart_itemAmount"].Value);
+                        if (cart_item.Cells["cart_itemName"].Value.ToString().Contains(item.Cells["ProductName"].Value.ToString()))
+                        {
+                            amount++;
+                            cart_item.Cells["cart_itemAmount"].Value = amount.ToString();
+                            break;
+                        }
+                        else 
+                        {
+                            amount = 1;
+                            continue;
+                        }
+                        
+                    }
+                    if (amount == 1)
+                    {
+                        int n = cartGridView.Rows.Add();
+                        cartGridView.Rows[n].Cells["cart_itemName"].Value = item.Cells["ProductName"].Value.ToString();
+                        cartGridView.Rows[n].Cells["cart_itemCategory"].Value = productFull.Tables[0].Rows[item.Index]["Category"].ToString();
+                        cartGridView.Rows[n].Cells["cart_itemPrice"].Value = item.Cells["Price"].Value.ToString();
+                        cartGridView.Rows[n].Cells["cart_itemAmount"].Value = amount.ToString();
+                    }
+                    
+
+                    
 
                 }
 
             }
         }
-        private void increaseAmount(DataGridViewRow item, DataSet table)
+        private int increaseAmount(String source, String compare, int current)
         {
+            if(current != 1)
+            {
+                int amount = 0;
+                if (source.Equals(compare)) amount++;
+                return amount + current;
+            }
             
+            return 1;
+
+        }
+
+        private void PizzaListBtn_Click(object sender, EventArgs e)
+        {
+            dataset = productDatbase.getPizza();
+            dtProduct = dataset.Tables[0];
+            foodGridView.DataSource = dtProduct;
+            foodGridView.AutoResizeColumns();
+        }
+
+        private void DrinkListBtn_Click(object sender, EventArgs e)
+        {
+            dataset = productDatbase.getDrink();
+            dtProduct = dataset.Tables[0];
+            foodGridView.DataSource = dtProduct;
+            foodGridView.AutoResizeColumns();
+        }
+
+        private void deleteBtn_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cancelBtn_Click(object sender, EventArgs e)
+        {
+            cartGridView.Rows.Clear();
         }
         //test hàm
 
