@@ -1,0 +1,25 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+using System.Data;
+using System.Data.SqlClient;
+using Winform_Final.DBLayers;
+
+namespace Winform_Final.Business_Layers
+{
+    internal class BSProduct
+    {
+        DBMain db = null;
+        public BSProduct()
+        {
+            db = new DBMain();
+        }
+        public DataSet getProducts()
+        {
+            return db.ExecuteQueryDataSet("select ID, ProductName, price from PRODUCT", CommandType.Text);
+        }
+    }
+}

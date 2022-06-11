@@ -11,7 +11,7 @@ namespace Winform_Final.DBLayers
 {
     internal class DBMain
     {
-        string strConnectionString = "";
+        string strConnectionString = "Data Source=LAPTOP-DU7444DE\\MANPHAM;Initial Catalog=PizzaManager;Integrated Security=True";
 
         SqlConnection conn = null;
         SqlCommand comm = null;

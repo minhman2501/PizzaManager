@@ -53,6 +53,7 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Business_Layers\BSProduct.cs" />
     <Compile Include="Interfaces\Administrator Interfaces\MainAdminInterfaces.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -109,6 +110,9 @@
     <Compile Include="Interfaces\Global\SignInAccount.Designer.cs">
       <DependentUpon>SignInAccount.cs</DependentUpon>
     </Compile>
+    <Compile Include="Objects\Drink.cs" />
+    <Compile Include="Objects\Pizza.cs" />
+    <Compile Include="Objects\Product.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Interfaces\Administrator Interfaces\MainAdminInterfaces.resx">
@@ -177,8 +181,6 @@
   <ItemGroup>
     <None Include="Resources\Login.jpg" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Business_Layers\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
