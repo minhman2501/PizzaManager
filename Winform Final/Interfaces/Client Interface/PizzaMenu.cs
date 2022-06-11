@@ -164,7 +164,7 @@ namespace Winform_Final.Client_Interface
 
         private void deleteBtn_Click(object sender, EventArgs e)
         {
-
+            cartGridView.Rows.RemoveAt(cartGridView.CurrentCell.RowIndex);
         }
 
         private void cancelBtn_Click(object sender, EventArgs e)
