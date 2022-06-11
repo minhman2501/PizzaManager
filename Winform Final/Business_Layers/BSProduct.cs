@@ -21,5 +21,10 @@ namespace Winform_Final.Business_Layers
         {
             return db.ExecuteQueryDataSet("select ID, ProductName, price from PRODUCT", CommandType.Text);
         }
+
+        public DataSet getProductsTable()
+        {
+            return db.ExecuteQueryDataSet("select * from PRODUCT", CommandType.Text);
+        }
     }
 }

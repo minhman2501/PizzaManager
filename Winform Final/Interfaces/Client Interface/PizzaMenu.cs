@@ -20,6 +20,8 @@ namespace Winform_Final.Client_Interface
         string err;
 
         BSProduct productDatbase = new BSProduct();
+        DataSet dataset;
+        DataSet productFull;
 
         public PizzaMenu()
         {
@@ -32,12 +34,15 @@ namespace Winform_Final.Client_Interface
             {
                 dtProduct = new DataTable();
                 dtProduct.Clear();
-                DataSet ds = productDatbase.getProducts();
-                dtProduct = ds.Tables[0];
                 foodGridView.Rows.Clear();
 
-                foodGridView.DataSource = dtProduct;
+                dataset = productDatbase.getProducts();
+                productFull = productDatbase.getProductsTable();
 
+                dtProduct = dataset.Tables[0];
+
+                
+                foodGridView.DataSource = dtProduct;
                 foodGridView.AutoResizeColumns();
 
                         
@@ -84,17 +89,28 @@ namespace Winform_Final.Client_Interface
 
         private void addBtn_Click(object sender, EventArgs e)
         {
+
             int selectedIndex = foodGridView.CurrentCell.RowIndex;
             foreach (DataGridViewRow item in foodGridView.Rows)
             {
-                if ((bool)item.Cells[0].Value == true && item.Cells[0].Value != null)
+                if (item.Cells["select"].Value == null)
+                {
+                    item.Cells["select"].Value = false;
+                }
+                if ((bool)item.Cells[0].Value == true)
                 {
                     int n = cartGridView.Rows.Add();
-                    cartGridView.Rows[n].Cells[2].Value = item.Cells[1].Value.ToString();
-                    cartGridView.Rows[n].Cells[4].Value = item.Cells[3].Value.ToString();
+                    cartGridView.Rows[n].Cells["cart_itemName"].Value = item.Cells[2].Value.ToString();
+                    cartGridView.Rows[n].Cells["cart_itemCategory"].Value = productFull.Tables[0].Rows[item.Index]["Category"].ToString();
+                    cartGridView.Rows[n].Cells["cart_itemPrice"].Value = item.Cells[3].Value.ToString();
+
                 }
 
             }
+        }
+        private void increaseAmount(DataGridViewRow item, DataSet table)
+        {
+            
         }
         //test hàm
 

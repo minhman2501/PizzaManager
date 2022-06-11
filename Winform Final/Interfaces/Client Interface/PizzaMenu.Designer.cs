@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label2 = new System.Windows.Forms.Label();
             this.PizzaListBtn = new System.Windows.Forms.Button();
             this.DrinkListBtn = new System.Windows.Forms.Button();
@@ -42,13 +42,12 @@
             this.confirmBtn = new FontAwesome.Sharp.IconButton();
             this.label1 = new System.Windows.Forms.Label();
             this.cartGridView = new System.Windows.Forms.DataGridView();
-            this.column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cartAmountColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.foodGridView = new System.Windows.Forms.DataGridView();
-            this.selecProduct = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.select = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.cart_itemName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cart_itemCategory = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cart_itemAmount = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cart_itemPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.menuPanel.SuspendLayout();
             this.foodListPanel.SuspendLayout();
             this.cartPanel.SuspendLayout();
@@ -255,19 +254,20 @@
             // 
             // cartGridView
             // 
-            dataGridViewCellStyle8.Padding = new System.Windows.Forms.Padding(0, 10, 0, 0);
-            this.cartGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle8;
+            this.cartGridView.AllowUserToAddRows = false;
+            this.cartGridView.AllowUserToDeleteRows = false;
+            dataGridViewCellStyle1.Padding = new System.Windows.Forms.Padding(0, 10, 0, 0);
+            this.cartGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.cartGridView.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.cartGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.cartGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.cartGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.column1,
-            this.cartAmountColumn,
-            this.Column3,
-            this.dataGridViewTextBoxColumn2,
-            this.Column2});
+            this.cart_itemName,
+            this.cart_itemCategory,
+            this.cart_itemAmount,
+            this.cart_itemPrice});
             this.cartGridView.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cartGridView.Location = new System.Drawing.Point(15, 72);
             this.cartGridView.Name = "cartGridView";
@@ -276,48 +276,13 @@
             this.cartGridView.Size = new System.Drawing.Size(536, 483);
             this.cartGridView.TabIndex = 2;
             // 
-            // column1
-            // 
-            this.column1.HeaderText = "ID";
-            this.column1.MinimumWidth = 6;
-            this.column1.Name = "column1";
-            this.column1.Width = 125;
-            // 
-            // cartAmountColumn
-            // 
-            this.cartAmountColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.cartAmountColumn.HeaderText = "Food ";
-            this.cartAmountColumn.MinimumWidth = 6;
-            this.cartAmountColumn.Name = "cartAmountColumn";
-            this.cartAmountColumn.ReadOnly = true;
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "Category";
-            this.Column3.MinimumWidth = 6;
-            this.Column3.Name = "Column3";
-            this.Column3.Width = 125;
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.HeaderText = "Amount";
-            this.dataGridViewTextBoxColumn2.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.ReadOnly = true;
-            this.dataGridViewTextBoxColumn2.Width = 125;
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "Price";
-            this.Column2.MinimumWidth = 6;
-            this.Column2.Name = "Column2";
-            this.Column2.Width = 125;
-            // 
             // foodGridView
             // 
+            this.foodGridView.AllowUserToAddRows = false;
+            this.foodGridView.AllowUserToDeleteRows = false;
             this.foodGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.foodGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.selecProduct});
+            this.select});
             this.foodGridView.Location = new System.Drawing.Point(3, 3);
             this.foodGridView.Name = "foodGridView";
             this.foodGridView.ReadOnly = true;
@@ -330,12 +295,44 @@
             this.foodGridView.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.foodGridView_CellDoubleClick);
             this.foodGridView.MouseClick += new System.Windows.Forms.MouseEventHandler(this.foodGridView_MouseClick);
             // 
-            // selecProduct
+            // select
             // 
-            this.selecProduct.HeaderText = "Select";
-            this.selecProduct.MinimumWidth = 6;
-            this.selecProduct.Name = "selecProduct";
-            this.selecProduct.Width = 125;
+            this.select.HeaderText = "Select";
+            this.select.MinimumWidth = 6;
+            this.select.Name = "select";
+            this.select.ReadOnly = true;
+            this.select.Width = 125;
+            // 
+            // cart_itemName
+            // 
+            this.cart_itemName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.cart_itemName.HeaderText = "Food ";
+            this.cart_itemName.MinimumWidth = 6;
+            this.cart_itemName.Name = "cart_itemName";
+            this.cart_itemName.ReadOnly = true;
+            // 
+            // cart_itemCategory
+            // 
+            this.cart_itemCategory.HeaderText = "Category";
+            this.cart_itemCategory.MinimumWidth = 6;
+            this.cart_itemCategory.Name = "cart_itemCategory";
+            this.cart_itemCategory.ReadOnly = true;
+            this.cart_itemCategory.Width = 125;
+            // 
+            // cart_itemAmount
+            // 
+            this.cart_itemAmount.HeaderText = "Amount";
+            this.cart_itemAmount.MinimumWidth = 6;
+            this.cart_itemAmount.Name = "cart_itemAmount";
+            this.cart_itemAmount.Width = 125;
+            // 
+            // cart_itemPrice
+            // 
+            this.cart_itemPrice.HeaderText = "Price";
+            this.cart_itemPrice.MinimumWidth = 6;
+            this.cart_itemPrice.Name = "cart_itemPrice";
+            this.cart_itemPrice.ReadOnly = true;
+            this.cart_itemPrice.Width = 125;
             // 
             // PizzaMenu
             // 
@@ -373,12 +370,11 @@
         private FontAwesome.Sharp.IconButton addBtn;
         private System.Windows.Forms.Panel foodListPanel;
         private FontAwesome.Sharp.IconButton testBtn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cartAmountColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridView foodGridView;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn selecProduct;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn select;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cart_itemName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cart_itemCategory;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cart_itemAmount;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cart_itemPrice;
     }
 }
