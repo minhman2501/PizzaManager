@@ -28,14 +28,19 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label2 = new System.Windows.Forms.Label();
             this.PizzaListBtn = new System.Windows.Forms.Button();
             this.DrinkListBtn = new System.Windows.Forms.Button();
             this.menuPanel = new System.Windows.Forms.Panel();
             this.foodListPanel = new System.Windows.Forms.Panel();
             this.foodGridView = new System.Windows.Forms.DataGridView();
+            this.seletectProduct = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.foodID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.foodName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.foodPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.testBtn = new FontAwesome.Sharp.IconButton();
             this.addBtn = new FontAwesome.Sharp.IconButton();
             this.cartPanel = new System.Windows.Forms.Panel();
             this.deleteBtn = new FontAwesome.Sharp.IconButton();
@@ -43,11 +48,6 @@
             this.confirmBtn = new FontAwesome.Sharp.IconButton();
             this.label1 = new System.Windows.Forms.Label();
             this.cartGridView = new System.Windows.Forms.DataGridView();
-            this.testBtn = new FontAwesome.Sharp.IconButton();
-            this.seletectProduct = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.foodID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.foodName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.foodPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cartAmountColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -119,13 +119,13 @@
             this.foodListPanel.Controls.Add(this.addBtn);
             this.foodListPanel.Location = new System.Drawing.Point(12, 137);
             this.foodListPanel.Name = "foodListPanel";
-            this.foodListPanel.Size = new System.Drawing.Size(585, 575);
+            this.foodListPanel.Size = new System.Drawing.Size(638, 575);
             this.foodListPanel.TabIndex = 5;
             // 
             // foodGridView
             // 
-            dataGridViewCellStyle4.Padding = new System.Windows.Forms.Padding(0, 10, 0, 0);
-            this.foodGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.Padding = new System.Windows.Forms.Padding(0, 10, 0, 0);
+            this.foodGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.foodGridView.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -141,165 +141,8 @@
             this.foodGridView.Name = "foodGridView";
             this.foodGridView.RowHeadersWidth = 51;
             this.foodGridView.RowTemplate.Height = 30;
-            this.foodGridView.Size = new System.Drawing.Size(582, 477);
+            this.foodGridView.Size = new System.Drawing.Size(635, 477);
             this.foodGridView.TabIndex = 2;
-            // 
-            // addBtn
-            // 
-            this.addBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.addBtn.BackColor = System.Drawing.Color.White;
-            this.addBtn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(134)))), ((int)(((byte)(0)))));
-            this.addBtn.FlatAppearance.BorderSize = 2;
-            this.addBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.addBtn.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.addBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(134)))), ((int)(((byte)(0)))));
-            this.addBtn.IconChar = FontAwesome.Sharp.IconChar.CartPlus;
-            this.addBtn.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(134)))), ((int)(((byte)(0)))));
-            this.addBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.addBtn.IconSize = 40;
-            this.addBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.addBtn.Location = new System.Drawing.Point(426, 511);
-            this.addBtn.Name = "addBtn";
-            this.addBtn.Size = new System.Drawing.Size(156, 61);
-            this.addBtn.TabIndex = 4;
-            this.addBtn.Text = "Add";
-            this.addBtn.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.addBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.addBtn.UseVisualStyleBackColor = false;
-            // 
-            // cartPanel
-            // 
-            this.cartPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.cartPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(254)))), ((int)(((byte)(235)))));
-            this.cartPanel.Controls.Add(this.deleteBtn);
-            this.cartPanel.Controls.Add(this.cancelBtn);
-            this.cartPanel.Controls.Add(this.confirmBtn);
-            this.cartPanel.Controls.Add(this.label1);
-            this.cartPanel.Controls.Add(this.cartGridView);
-            this.cartPanel.Location = new System.Drawing.Point(603, 12);
-            this.cartPanel.Name = "cartPanel";
-            this.cartPanel.Size = new System.Drawing.Size(617, 701);
-            this.cartPanel.TabIndex = 3;
-            // 
-            // deleteBtn
-            // 
-            this.deleteBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.deleteBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(184)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.deleteBtn.FlatAppearance.BorderSize = 0;
-            this.deleteBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.deleteBtn.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.deleteBtn.ForeColor = System.Drawing.Color.White;
-            this.deleteBtn.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.deleteBtn.IconColor = System.Drawing.Color.Black;
-            this.deleteBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.deleteBtn.IconSize = 40;
-            this.deleteBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.deleteBtn.Location = new System.Drawing.Point(471, 640);
-            this.deleteBtn.Name = "deleteBtn";
-            this.deleteBtn.Size = new System.Drawing.Size(133, 49);
-            this.deleteBtn.TabIndex = 4;
-            this.deleteBtn.Text = "Delete";
-            this.deleteBtn.UseVisualStyleBackColor = false;
-            // 
-            // cancelBtn
-            // 
-            this.cancelBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.cancelBtn.BackColor = System.Drawing.Color.White;
-            this.cancelBtn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.cancelBtn.FlatAppearance.BorderSize = 2;
-            this.cancelBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cancelBtn.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cancelBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.cancelBtn.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.cancelBtn.IconColor = System.Drawing.Color.Black;
-            this.cancelBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.cancelBtn.IconSize = 40;
-            this.cancelBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.cancelBtn.Location = new System.Drawing.Point(332, 640);
-            this.cancelBtn.Name = "cancelBtn";
-            this.cancelBtn.Size = new System.Drawing.Size(133, 49);
-            this.cancelBtn.TabIndex = 4;
-            this.cancelBtn.Text = "Cancle";
-            this.cancelBtn.UseVisualStyleBackColor = false;
-            // 
-            // confirmBtn
-            // 
-            this.confirmBtn.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.confirmBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(178)))), ((int)(((byte)(0)))));
-            this.confirmBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.confirmBtn.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.confirmBtn.ForeColor = System.Drawing.Color.White;
-            this.confirmBtn.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.confirmBtn.IconColor = System.Drawing.Color.Black;
-            this.confirmBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.confirmBtn.IconSize = 40;
-            this.confirmBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.confirmBtn.Location = new System.Drawing.Point(15, 573);
-            this.confirmBtn.Name = "confirmBtn";
-            this.confirmBtn.Size = new System.Drawing.Size(589, 49);
-            this.confirmBtn.TabIndex = 4;
-            this.confirmBtn.Text = "Place Order";
-            this.confirmBtn.UseVisualStyleBackColor = false;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Goudy Old Style", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(143)))), ((int)(((byte)(140)))), ((int)(((byte)(0)))));
-            this.label1.Location = new System.Drawing.Point(20, 13);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(86, 43);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Cart";
-            // 
-            // cartGridView
-            // 
-            dataGridViewCellStyle3.Padding = new System.Windows.Forms.Padding(0, 10, 0, 0);
-            this.cartGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
-            this.cartGridView.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.cartGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.cartGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.cartGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.column1,
-            this.cartAmountColumn,
-            this.Column3,
-            this.dataGridViewTextBoxColumn2,
-            this.Column2});
-            this.cartGridView.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.cartGridView.Location = new System.Drawing.Point(15, 72);
-            this.cartGridView.Name = "cartGridView";
-            this.cartGridView.RowHeadersWidth = 51;
-            this.cartGridView.RowTemplate.Height = 30;
-            this.cartGridView.Size = new System.Drawing.Size(589, 483);
-            this.cartGridView.TabIndex = 2;
-            // 
-            // testBtn
-            // 
-            this.testBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.testBtn.BackColor = System.Drawing.Color.White;
-            this.testBtn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(134)))), ((int)(((byte)(0)))));
-            this.testBtn.FlatAppearance.BorderSize = 2;
-            this.testBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.testBtn.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.testBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(134)))), ((int)(((byte)(0)))));
-            this.testBtn.IconChar = FontAwesome.Sharp.IconChar.CartPlus;
-            this.testBtn.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(134)))), ((int)(((byte)(0)))));
-            this.testBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.testBtn.IconSize = 40;
-            this.testBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.testBtn.Location = new System.Drawing.Point(253, 511);
-            this.testBtn.Name = "testBtn";
-            this.testBtn.Size = new System.Drawing.Size(156, 61);
-            this.testBtn.TabIndex = 4;
-            this.testBtn.Text = "test";
-            this.testBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.testBtn.UseVisualStyleBackColor = false;
-            this.testBtn.Click += new System.EventHandler(this.testBtn_Click);
             // 
             // seletectProduct
             // 
@@ -332,6 +175,163 @@
             this.foodPrice.Name = "foodPrice";
             this.foodPrice.ReadOnly = true;
             this.foodPrice.Width = 125;
+            // 
+            // testBtn
+            // 
+            this.testBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.testBtn.BackColor = System.Drawing.Color.White;
+            this.testBtn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(134)))), ((int)(((byte)(0)))));
+            this.testBtn.FlatAppearance.BorderSize = 2;
+            this.testBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.testBtn.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.testBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(134)))), ((int)(((byte)(0)))));
+            this.testBtn.IconChar = FontAwesome.Sharp.IconChar.CartPlus;
+            this.testBtn.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(134)))), ((int)(((byte)(0)))));
+            this.testBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.testBtn.IconSize = 40;
+            this.testBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.testBtn.Location = new System.Drawing.Point(306, 511);
+            this.testBtn.Name = "testBtn";
+            this.testBtn.Size = new System.Drawing.Size(156, 61);
+            this.testBtn.TabIndex = 4;
+            this.testBtn.Text = "test";
+            this.testBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.testBtn.UseVisualStyleBackColor = false;
+            this.testBtn.Click += new System.EventHandler(this.testBtn_Click);
+            // 
+            // addBtn
+            // 
+            this.addBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.addBtn.BackColor = System.Drawing.Color.White;
+            this.addBtn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(134)))), ((int)(((byte)(0)))));
+            this.addBtn.FlatAppearance.BorderSize = 2;
+            this.addBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.addBtn.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.addBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(134)))), ((int)(((byte)(0)))));
+            this.addBtn.IconChar = FontAwesome.Sharp.IconChar.CartPlus;
+            this.addBtn.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(134)))), ((int)(((byte)(0)))));
+            this.addBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.addBtn.IconSize = 40;
+            this.addBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.addBtn.Location = new System.Drawing.Point(479, 511);
+            this.addBtn.Name = "addBtn";
+            this.addBtn.Size = new System.Drawing.Size(156, 61);
+            this.addBtn.TabIndex = 4;
+            this.addBtn.Text = "Add";
+            this.addBtn.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.addBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.addBtn.UseVisualStyleBackColor = false;
+            // 
+            // cartPanel
+            // 
+            this.cartPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.cartPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(254)))), ((int)(((byte)(235)))));
+            this.cartPanel.Controls.Add(this.deleteBtn);
+            this.cartPanel.Controls.Add(this.cancelBtn);
+            this.cartPanel.Controls.Add(this.confirmBtn);
+            this.cartPanel.Controls.Add(this.label1);
+            this.cartPanel.Controls.Add(this.cartGridView);
+            this.cartPanel.Location = new System.Drawing.Point(656, 12);
+            this.cartPanel.Name = "cartPanel";
+            this.cartPanel.Size = new System.Drawing.Size(564, 701);
+            this.cartPanel.TabIndex = 3;
+            // 
+            // deleteBtn
+            // 
+            this.deleteBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.deleteBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(184)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.deleteBtn.FlatAppearance.BorderSize = 0;
+            this.deleteBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.deleteBtn.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.deleteBtn.ForeColor = System.Drawing.Color.White;
+            this.deleteBtn.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.deleteBtn.IconColor = System.Drawing.Color.Black;
+            this.deleteBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.deleteBtn.IconSize = 40;
+            this.deleteBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.deleteBtn.Location = new System.Drawing.Point(418, 640);
+            this.deleteBtn.Name = "deleteBtn";
+            this.deleteBtn.Size = new System.Drawing.Size(133, 49);
+            this.deleteBtn.TabIndex = 4;
+            this.deleteBtn.Text = "Delete";
+            this.deleteBtn.UseVisualStyleBackColor = false;
+            // 
+            // cancelBtn
+            // 
+            this.cancelBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.cancelBtn.BackColor = System.Drawing.Color.White;
+            this.cancelBtn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.cancelBtn.FlatAppearance.BorderSize = 2;
+            this.cancelBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cancelBtn.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cancelBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.cancelBtn.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.cancelBtn.IconColor = System.Drawing.Color.Black;
+            this.cancelBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.cancelBtn.IconSize = 40;
+            this.cancelBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.cancelBtn.Location = new System.Drawing.Point(279, 640);
+            this.cancelBtn.Name = "cancelBtn";
+            this.cancelBtn.Size = new System.Drawing.Size(133, 49);
+            this.cancelBtn.TabIndex = 4;
+            this.cancelBtn.Text = "Cancle";
+            this.cancelBtn.UseVisualStyleBackColor = false;
+            // 
+            // confirmBtn
+            // 
+            this.confirmBtn.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.confirmBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(178)))), ((int)(((byte)(0)))));
+            this.confirmBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.confirmBtn.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.confirmBtn.ForeColor = System.Drawing.Color.White;
+            this.confirmBtn.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.confirmBtn.IconColor = System.Drawing.Color.Black;
+            this.confirmBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.confirmBtn.IconSize = 40;
+            this.confirmBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.confirmBtn.Location = new System.Drawing.Point(15, 573);
+            this.confirmBtn.Name = "confirmBtn";
+            this.confirmBtn.Size = new System.Drawing.Size(536, 49);
+            this.confirmBtn.TabIndex = 4;
+            this.confirmBtn.Text = "Place Order";
+            this.confirmBtn.UseVisualStyleBackColor = false;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Goudy Old Style", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(143)))), ((int)(((byte)(140)))), ((int)(((byte)(0)))));
+            this.label1.Location = new System.Drawing.Point(20, 13);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(86, 43);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Cart";
+            // 
+            // cartGridView
+            // 
+            dataGridViewCellStyle2.Padding = new System.Windows.Forms.Padding(0, 10, 0, 0);
+            this.cartGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle2;
+            this.cartGridView.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.cartGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.cartGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.cartGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.column1,
+            this.cartAmountColumn,
+            this.Column3,
+            this.dataGridViewTextBoxColumn2,
+            this.Column2});
+            this.cartGridView.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cartGridView.Location = new System.Drawing.Point(15, 72);
+            this.cartGridView.Name = "cartGridView";
+            this.cartGridView.RowHeadersWidth = 51;
+            this.cartGridView.RowTemplate.Height = 30;
+            this.cartGridView.Size = new System.Drawing.Size(536, 483);
+            this.cartGridView.TabIndex = 2;
             // 
             // column1
             // 
