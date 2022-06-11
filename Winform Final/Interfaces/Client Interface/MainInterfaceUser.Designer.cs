@@ -47,7 +47,7 @@
             this.sideBarPanel.Dock = System.Windows.Forms.DockStyle.Left;
             this.sideBarPanel.Location = new System.Drawing.Point(0, 0);
             this.sideBarPanel.Name = "sideBarPanel";
-            this.sideBarPanel.Size = new System.Drawing.Size(225, 656);
+            this.sideBarPanel.Size = new System.Drawing.Size(225, 655);
             this.sideBarPanel.TabIndex = 0;
             // 
             // iconButton1
@@ -62,7 +62,7 @@
             this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButton1.IconSize = 40;
             this.iconButton1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton1.Location = new System.Drawing.Point(0, 581);
+            this.iconButton1.Location = new System.Drawing.Point(0, 580);
             this.iconButton1.Name = "iconButton1";
             this.iconButton1.Size = new System.Drawing.Size(225, 75);
             this.iconButton1.TabIndex = 4;
@@ -142,13 +142,13 @@
             this.wrapperPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.wrapperPanel.Location = new System.Drawing.Point(225, 0);
             this.wrapperPanel.Name = "wrapperPanel";
-            this.wrapperPanel.Size = new System.Drawing.Size(1113, 656);
+            this.wrapperPanel.Size = new System.Drawing.Size(1234, 655);
             this.wrapperPanel.TabIndex = 1;
             // 
             // MainInterfaceUser
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.ClientSize = new System.Drawing.Size(1338, 656);
+            this.ClientSize = new System.Drawing.Size(1459, 655);
             this.Controls.Add(this.wrapperPanel);
             this.Controls.Add(this.sideBarPanel);
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(255)))), ((int)(((byte)(235)))));

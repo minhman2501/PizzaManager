@@ -53,88 +53,92 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Administrator Interfaces\MainAdminInterfaces.cs">
+    <Compile Include="Business_Layers\BSProduct.cs" />
+    <Compile Include="Class Folder\Class Object\Drink.cs" />
+    <Compile Include="Class Folder\Class Object\Product.cs" />
+    <Compile Include="Interfaces\Administrator Interfaces\MainAdminInterfaces.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Administrator Interfaces\MainAdminInterfaces.Designer.cs">
+    <Compile Include="Interfaces\Administrator Interfaces\MainAdminInterfaces.Designer.cs">
       <DependentUpon>MainAdminInterfaces.cs</DependentUpon>
     </Compile>
-    <Compile Include="Administrator Interfaces\ProductManage.cs">
+    <Compile Include="Interfaces\Administrator Interfaces\ProductManage.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Administrator Interfaces\ProductManage.Designer.cs">
+    <Compile Include="Interfaces\Administrator Interfaces\ProductManage.Designer.cs">
       <DependentUpon>ProductManage.cs</DependentUpon>
     </Compile>
     <Compile Include="Class Folder\Class Object\Pizza.cs" />
-    <Compile Include="Client Interface\HomeScreen.cs">
+    <Compile Include="Interfaces\Client Interface\HomeScreen.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Client Interface\HomeScreen.Designer.cs">
+    <Compile Include="Interfaces\Client Interface\HomeScreen.Designer.cs">
       <DependentUpon>HomeScreen.cs</DependentUpon>
     </Compile>
-    <Compile Include="Client Interface\Item.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Client Interface\Item.Designer.cs">
-      <DependentUpon>Item.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Client Interface\MainInterfaceUser.cs">
+    <Compile Include="Interfaces\Client Interface\MainInterfaceUser.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Client Interface\MainInterfaceUser.Designer.cs">
+    <Compile Include="Interfaces\Client Interface\MainInterfaceUser.Designer.cs">
       <DependentUpon>MainInterfaceUser.cs</DependentUpon>
     </Compile>
-    <Compile Include="Client Interface\PizzaMenu.cs">
+    <Compile Include="Interfaces\Client Interface\PizzaMenu.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Client Interface\PizzaMenu.Designer.cs">
+    <Compile Include="Interfaces\Client Interface\PizzaMenu.Designer.cs">
       <DependentUpon>PizzaMenu.cs</DependentUpon>
     </Compile>
-    <Compile Include="Global\LoginAccount.cs">
+    <Compile Include="DB_Layers\DBMain.cs" />
+    <Compile Include="Interfaces\Global\Bill_Interface.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Global\LoginAccount.Designer.cs">
+    <Compile Include="Interfaces\Global\Bill_Interface.Designer.cs">
+      <DependentUpon>Bill_Interface.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interfaces\Global\LoginAccount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interfaces\Global\LoginAccount.Designer.cs">
       <DependentUpon>LoginAccount.cs</DependentUpon>
     </Compile>
-    <Compile Include="Global\MainAccountInterface.cs">
+    <Compile Include="Interfaces\Global\MainAccountInterface.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Global\MainAccountInterface.Designer.cs">
+    <Compile Include="Interfaces\Global\MainAccountInterface.Designer.cs">
       <DependentUpon>MainAccountInterface.cs</DependentUpon>
     </Compile>
-    <Compile Include="Global\SignInAccount.cs">
+    <Compile Include="Interfaces\Global\SignInAccount.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Global\SignInAccount.Designer.cs">
+    <Compile Include="Interfaces\Global\SignInAccount.Designer.cs">
       <DependentUpon>SignInAccount.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Administrator Interfaces\MainAdminInterfaces.resx">
+    <EmbeddedResource Include="Interfaces\Administrator Interfaces\MainAdminInterfaces.resx">
       <DependentUpon>MainAdminInterfaces.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Administrator Interfaces\ProductManage.resx">
+    <EmbeddedResource Include="Interfaces\Administrator Interfaces\ProductManage.resx">
       <DependentUpon>ProductManage.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Client Interface\HomeScreen.resx">
+    <EmbeddedResource Include="Interfaces\Client Interface\HomeScreen.resx">
       <DependentUpon>HomeScreen.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Client Interface\Item.resx">
-      <DependentUpon>Item.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Client Interface\MainInterfaceUser.resx">
+    <EmbeddedResource Include="Interfaces\Client Interface\MainInterfaceUser.resx">
       <DependentUpon>MainInterfaceUser.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Client Interface\PizzaMenu.resx">
+    <EmbeddedResource Include="Interfaces\Client Interface\PizzaMenu.resx">
       <DependentUpon>PizzaMenu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Global\LoginAccount.resx">
+    <EmbeddedResource Include="Interfaces\Global\Bill_Interface.resx">
+      <DependentUpon>Bill_Interface.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interfaces\Global\LoginAccount.resx">
       <DependentUpon>LoginAccount.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Global\MainAccountInterface.resx">
+    <EmbeddedResource Include="Interfaces\Global\MainAccountInterface.resx">
       <DependentUpon>MainAccountInterface.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Global\SignInAccount.resx">
+    <EmbeddedResource Include="Interfaces\Global\SignInAccount.resx">
       <DependentUpon>SignInAccount.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -176,5 +180,6 @@
   <ItemGroup>
     <None Include="Resources\Login.jpg" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

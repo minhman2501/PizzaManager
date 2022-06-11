@@ -6,12 +6,11 @@ using System.Threading.Tasks;
 
 namespace Winform_Final.Class_Folder.Class_Object
 {
-    public class Pizza : Product
+    public class Drink : Product
     {
-        public Pizza(string name, int price, int amount) : base(name, price, amount)
+        public Drink(string name, int price, int amount) : base(name, price, amount)
         {
-            this.category = "Pizza";
+            this.category = "Drink";
         }
-
     }
 }
