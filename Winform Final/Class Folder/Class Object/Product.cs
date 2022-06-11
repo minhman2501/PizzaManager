@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Winform_Final.Class_Folder.Class_Object
 {
-    class Product
+    public class Product
     {
         protected int amount;
         protected string name;
@@ -29,9 +29,9 @@ namespace Winform_Final.Class_Folder.Class_Object
         {
             return this.getPrice() * this.amount;
         }
-        protected string printContent()
+        public string printContent()
         {
-            string content = $"{this.category}: {this.name}; Amount: x{this.amount}; Price:{this.calculate()}";
+            string content = $"{this.category}:\t {this.name}; \t Amount: x{this.amount}";
             return content;
 
         }

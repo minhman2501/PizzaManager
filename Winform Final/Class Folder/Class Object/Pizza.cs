@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Winform_Final.Class_Folder.Class_Object
 {
-    class Pizza : Product
+    public class Pizza : Product
     {
         public Pizza(string name, int price, int amount) : base(name, price, amount)
         {

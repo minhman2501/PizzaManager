@@ -40,7 +40,7 @@
             this.unitPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.amountPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
+            this.total_priceLB = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.confirmBtn = new FontAwesome.Sharp.IconButton();
             this.cancelOrderBtn = new FontAwesome.Sharp.IconButton();
@@ -169,15 +169,15 @@
             this.label5.TabIndex = 0;
             this.label5.Text = "INVOICE TOTAL";
             // 
-            // label6
+            // total_priceLB
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(425, 271);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(207, 30);
-            this.label6.TabIndex = 0;
-            this.label6.Text = "[insertTotalPrice]";
+            this.total_priceLB.AutoSize = true;
+            this.total_priceLB.Font = new System.Drawing.Font("Oswald", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.total_priceLB.Location = new System.Drawing.Point(404, 250);
+            this.total_priceLB.Name = "total_priceLB";
+            this.total_priceLB.Size = new System.Drawing.Size(242, 58);
+            this.total_priceLB.TabIndex = 0;
+            this.total_priceLB.Text = "[insertTotalPrice]";
             // 
             // label4
             // 
@@ -261,7 +261,7 @@
             this.Controls.Add(this.clientAddressTxt);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.label6);
+            this.Controls.Add(this.total_priceLB);
             this.Controls.Add(this.clientName);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label2);
@@ -271,6 +271,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Bill_Interface";
             this.TopMost = true;
+            this.Load += new System.EventHandler(this.Bill_Interface_Load);
             ((System.ComponentModel.ISupportInitialize)(this.bill_itemGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -287,7 +288,7 @@
         private System.Windows.Forms.TextBox clientAddressTxt;
         private System.Windows.Forms.DataGridView bill_itemGridView;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label total_priceLB;
         private System.Windows.Forms.DataGridViewTextBoxColumn quantity;
         private System.Windows.Forms.DataGridViewTextBoxColumn description;
         private System.Windows.Forms.DataGridViewTextBoxColumn unitPrice;

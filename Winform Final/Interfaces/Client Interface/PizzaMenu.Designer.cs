@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label2 = new System.Windows.Forms.Label();
             this.PizzaListBtn = new System.Windows.Forms.Button();
             this.DrinkListBtn = new System.Windows.Forms.Button();
@@ -270,6 +270,7 @@
             this.confirmBtn.TabIndex = 4;
             this.confirmBtn.Text = "Place Order";
             this.confirmBtn.UseVisualStyleBackColor = false;
+            this.confirmBtn.Click += new System.EventHandler(this.confirmBtn_Click);
             // 
             // label1
             // 
@@ -286,8 +287,8 @@
             // 
             this.cartGridView.AllowUserToAddRows = false;
             this.cartGridView.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle4.Padding = new System.Windows.Forms.Padding(0, 10, 0, 0);
-            this.cartGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.Padding = new System.Windows.Forms.Padding(0, 10, 0, 0);
+            this.cartGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.cartGridView.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -308,11 +309,12 @@
             // 
             // cart_itemName
             // 
-            this.cart_itemName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.cart_itemName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
             this.cart_itemName.HeaderText = "Food ";
             this.cart_itemName.MinimumWidth = 6;
             this.cart_itemName.Name = "cart_itemName";
             this.cart_itemName.ReadOnly = true;
+            this.cart_itemName.Width = 71;
             // 
             // cart_itemCategory
             // 

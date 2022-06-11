@@ -8,9 +8,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Winform_Final.Class_Folder.Class_Object;
 
 using System.Data.SqlClient;
 using Winform_Final.Business_Layers;
+using Winform_Final.Interfaces.Global;
 
 namespace Winform_Final.Client_Interface
 {
@@ -125,10 +127,6 @@ namespace Winform_Final.Client_Interface
                         cartGridView.Rows[n].Cells["cart_itemPrice"].Value = item.Cells["Price"].Value.ToString();
                         cartGridView.Rows[n].Cells["cart_itemAmount"].Value = amount.ToString();
                     }
-                    
-
-                    
-
                 }
 
             }
@@ -143,9 +141,7 @@ namespace Winform_Final.Client_Interface
             }
             
             return 1;
-
         }
-
         private void PizzaListBtn_Click(object sender, EventArgs e)
         {
             dataset = productDatbase.getPizza();
@@ -170,6 +166,17 @@ namespace Winform_Final.Client_Interface
         private void cancelBtn_Click(object sender, EventArgs e)
         {
             cartGridView.Rows.Clear();
+        }
+
+        private void confirmBtn_Click(object sender, EventArgs e)
+        {
+            List<Product> itemList = new List<Product>();
+            foreach(DataGridViewRow item in cartGridView.Rows)
+            {
+                itemList.Add(new Product(item.Cells["cart_itemName"].Value.ToString(), Convert.ToInt32(item.Cells["cart_itemPrice"].Value), Convert.ToInt32(item.Cells["cart_itemAmount"].Value)));
+            }
+            Bill_Interface bill = new Bill_Interface(itemList);
+            bill.Show();
         }
         //test hàm
 
