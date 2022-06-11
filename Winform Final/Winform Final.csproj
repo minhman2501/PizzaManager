@@ -54,6 +54,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Business_Layers\BSProduct.cs" />
+    <Compile Include="Class Folder\Class Object\Drink.cs" />
+    <Compile Include="Class Folder\Class Object\Product.cs" />
     <Compile Include="Interfaces\Administrator Interfaces\MainAdminInterfaces.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -110,9 +112,6 @@
     <Compile Include="Interfaces\Global\SignInAccount.Designer.cs">
       <DependentUpon>SignInAccount.cs</DependentUpon>
     </Compile>
-    <Compile Include="Objects\Drink.cs" />
-    <Compile Include="Objects\Pizza.cs" />
-    <Compile Include="Objects\Product.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Interfaces\Administrator Interfaces\MainAdminInterfaces.resx">

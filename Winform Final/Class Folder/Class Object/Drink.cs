@@ -4,21 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Winform_Final.Objects
+namespace Winform_Final.Class_Folder.Class_Object
 {
     internal class Drink : Product
     {
-        public Drink()
+        public Drink(string name, int price, int amount) : base(name, price, amount)
         {
-
-        }
-        public override void Calculate()
-        {
-
-        }
-        public override void printContent()
-        {
-
+            this.category = "Drink";
         }
     }
 }
