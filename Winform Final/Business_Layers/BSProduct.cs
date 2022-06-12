@@ -13,6 +13,7 @@ namespace Winform_Final.Business_Layers
     internal class BSProduct
     {
         DBMain db = null;
+        string err = "nooo";
         public BSProduct()
         {
             db = new DBMain();
@@ -29,13 +30,27 @@ namespace Winform_Final.Business_Layers
         {
             return db.ExecuteQueryDataSet("select ID, ProductName, price from PRODUCT where Category='Drink'", CommandType.Text);
         }
-        public DataSet countProducts()
+        public int countProducts(ref string err)
         {
-            return db.ExecuteQueryDataSet("Count * from PRODUCT", CommandType.Text);
+            return db.ExecuteCount("SELECT COUNT(*) FROM PRODUCT", CommandType.Text, ref err);
+        }
+        public int countProductTypes(ref string err, string category)
+        {
+            return db.ExecuteCount("SELECT COUNT(*) FROM PRODUCT where Category='"+category+"'", CommandType.Text, ref err);
         }
         public DataSet getProductFullDetail()
         {
             return db.ExecuteQueryDataSet("select * from PRODUCT", CommandType.Text);
+        }
+        public bool updateProduct(string foodID, string name, string category, string price, ref string err)
+        {
+            string sqlString = "Update PRODUCT Set ProductName = N'" + name + "', Category ='" + category + "', price ='" + Convert.ToInt32(price) + "' Where ID='" + Convert.ToInt32(foodID) + "'";
+            return db.MyExecuteNonQuery(sqlString, CommandType.Text, ref err);
+        }
+        public bool addingProduct(string name, string category, string price, ref string err)
+        {
+            string sqlString = "Insert Into PRODUCT Values(" + "N'" + name + "','" + Convert.ToInt32(price) + "','" + category + "')";
+            return db.MyExecuteNonQuery(sqlString, CommandType.Text, ref err);
         }
     }
 }

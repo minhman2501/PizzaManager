@@ -155,6 +155,7 @@ namespace Winform_Final.Client_Interface
             Bill_Interface bill = new Bill_Interface(itemList);
             bill.Show();
         }
+
         //test hàm
 
 
