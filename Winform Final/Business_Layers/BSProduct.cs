@@ -22,14 +22,11 @@ namespace Winform_Final.Business_Layers
         {
             return db.ExecuteQueryDataSet("select ID, ProductName, price from PRODUCT", CommandType.Text);
         }
-        public DataSet getPizza()
+        public DataSet getProduct_baseOnCategory(string category)
         {
-            return db.ExecuteQueryDataSet("select ID, ProductName, price from PRODUCT where Category='Pizza'", CommandType.Text);
+            return db.ExecuteQueryDataSet("select ID, ProductName, price from PRODUCT where Category='"+category+"'", CommandType.Text);
         }
-        public DataSet getDrink()
-        {
-            return db.ExecuteQueryDataSet("select ID, ProductName, price from PRODUCT where Category='Drink'", CommandType.Text);
-        }
+        
         public int countProducts(ref string err)
         {
             return db.ExecuteCount("SELECT COUNT(*) FROM PRODUCT", CommandType.Text, ref err);
@@ -42,9 +39,9 @@ namespace Winform_Final.Business_Layers
         {
             return db.ExecuteQueryDataSet("select * from PRODUCT", CommandType.Text);
         }
-        public bool updateProduct(string foodID, string name, string category, string price, ref string err)
+        public bool updateProduct(string foodID, string name, string price, ref string err)
         {
-            string sqlString = "Update PRODUCT Set ProductName = N'" + name + "', Category ='" + category + "', price ='" + Convert.ToInt32(price) + "' Where ID='" + Convert.ToInt32(foodID) + "'";
+            string sqlString = "Update PRODUCT Set ProductName = N'" + name + "', price ='" + Convert.ToInt32(price) + "' Where ID='" + Convert.ToInt32(foodID) + "'";
             return db.MyExecuteNonQuery(sqlString, CommandType.Text, ref err);
         }
         public bool addingProduct(string name, string category, string price, ref string err)

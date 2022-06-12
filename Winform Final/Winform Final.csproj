@@ -112,9 +112,6 @@
     <Compile Include="Interfaces\Global\SignInAccount.Designer.cs">
       <DependentUpon>SignInAccount.cs</DependentUpon>
     </Compile>
-    <Compile Include="MainAdminInterfacees.cs">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Interfaces\Administrator Interfaces\MainAdminInterfaces.resx">

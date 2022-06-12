@@ -73,6 +73,7 @@ namespace Winform_Final.Administrator_Interfaces
                 case 2:
                     addProductPanel.Enabled = true;
                     productGridView.Enabled = false;
+                    newProductCategoryCb.Enabled = false;
                     newProductNameTxt.Focus();
                     break;
             }
@@ -132,7 +133,7 @@ namespace Winform_Final.Administrator_Interfaces
                     if(isChange)
                     {
                         
-                        productData.updateProduct(idProductLB.Text, newProductNameTxt.Text, newProductCategoryCb.Text, newProductPriceTxt.Text, ref err);
+                        productData.updateProduct(idProductLB.Text, newProductNameTxt.Text, newProductPriceTxt.Text, ref err);
                         LoadData();
                         MessageBox.Show("Successfully Edited!");
                     }

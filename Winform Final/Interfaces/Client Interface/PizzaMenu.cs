@@ -121,7 +121,7 @@ namespace Winform_Final.Client_Interface
         }
         private void PizzaListBtn_Click(object sender, EventArgs e)
         {
-            dataset = productDatbase.getPizza();
+            dataset = productDatbase.getProduct_baseOnCategory("Pizza");
             dtProduct = dataset.Tables[0];
             foodGridView.DataSource = dtProduct;
             foodGridView.AutoResizeColumns();
@@ -129,7 +129,7 @@ namespace Winform_Final.Client_Interface
 
         private void DrinkListBtn_Click(object sender, EventArgs e)
         {
-            dataset = productDatbase.getDrink();
+            dataset = productDatbase.getProduct_baseOnCategory("Drink");
             dtProduct = dataset.Tables[0];
             foodGridView.DataSource = dtProduct;
             foodGridView.AutoResizeColumns();
