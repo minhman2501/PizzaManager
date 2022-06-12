@@ -40,7 +40,7 @@
             this.iconButton2 = new FontAwesome.Sharp.IconButton();
             this.iconButton1 = new FontAwesome.Sharp.IconButton();
             this.addBtn = new FontAwesome.Sharp.IconButton();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.productGridView = new System.Windows.Forms.DataGridView();
             this.label4 = new System.Windows.Forms.Label();
             this.addProductPanel = new System.Windows.Forms.Panel();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
@@ -54,7 +54,7 @@
             this.label6 = new System.Windows.Forms.Label();
             this.wrapperPanel.SuspendLayout();
             this.productListPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.productGridView)).BeginInit();
             this.addProductPanel.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -73,7 +73,6 @@
             this.wrapperPanel.Name = "wrapperPanel";
             this.wrapperPanel.Size = new System.Drawing.Size(950, 197);
             this.wrapperPanel.TabIndex = 0;
-            this.wrapperPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // label5
             // 
@@ -164,7 +163,7 @@
             this.productListPanel.Controls.Add(this.iconButton2);
             this.productListPanel.Controls.Add(this.iconButton1);
             this.productListPanel.Controls.Add(this.addBtn);
-            this.productListPanel.Controls.Add(this.dataGridView1);
+            this.productListPanel.Controls.Add(this.productGridView);
             this.productListPanel.Controls.Add(this.label4);
             this.productListPanel.Location = new System.Drawing.Point(12, 203);
             this.productListPanel.Name = "productListPanel";
@@ -235,18 +234,18 @@
             this.addBtn.UseVisualStyleBackColor = false;
             this.addBtn.Click += new System.EventHandler(this.addBtn_Click);
             // 
-            // dataGridView1
+            // productGridView
             // 
-            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.productGridView.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(3, 63);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(517, 310);
-            this.dataGridView1.TabIndex = 2;
+            this.productGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.productGridView.Location = new System.Drawing.Point(3, 63);
+            this.productGridView.Name = "productGridView";
+            this.productGridView.RowHeadersWidth = 51;
+            this.productGridView.RowTemplate.Height = 24;
+            this.productGridView.Size = new System.Drawing.Size(517, 310);
+            this.productGridView.TabIndex = 2;
             // 
             // label4
             // 
@@ -422,11 +421,12 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ProductManage";
             this.Text = "ProductManage";
+            this.Load += new System.EventHandler(this.ProductManage_Load);
             this.wrapperPanel.ResumeLayout(false);
             this.wrapperPanel.PerformLayout();
             this.productListPanel.ResumeLayout(false);
             this.productListPanel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.productGridView)).EndInit();
             this.addProductPanel.ResumeLayout(false);
             this.addProductPanel.PerformLayout();
             this.ResumeLayout(false);
@@ -444,7 +444,7 @@
         private System.Windows.Forms.Label totalProductLabel;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel productListPanel;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView productGridView;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Panel addProductPanel;
         private System.Windows.Forms.Label label6;

@@ -1,12 +1,5 @@
-﻿using FontAwesome.Sharp;
-using System;
+﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using Winform_Final.Class_Folder.Class_Object;
 
@@ -24,7 +17,7 @@ namespace Winform_Final.Interfaces.Global
         {
             InitializeComponent();
             productList = new List<Product>();
-            foreach(Product item in products)
+            foreach (Product item in products)
             {
                 productList.Add(item);
             }
@@ -43,7 +36,7 @@ namespace Winform_Final.Interfaces.Global
         private int calculateTotalInvoice()
         {
             int total = 0;
-            foreach(Product item in productList)
+            foreach (Product item in productList)
             {
                 total += item.calculate();
             }

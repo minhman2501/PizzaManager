@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Winform_Final.Global
@@ -46,7 +39,7 @@ namespace Winform_Final.Global
                     this.askingLB.Text = "New member ?";
                     this.changeBtn.Text = "Sign Up Now !";
                     break;
-            }  
+            }
         }
         private void MainAccountInterface_Load(object sender, EventArgs e)
         {
@@ -60,7 +53,7 @@ namespace Winform_Final.Global
                 case true:
                     this.contentPanel.Controls.Remove(loginInterface);
                     this.contentPanel.Controls.Add(signInInterface);
-                    
+
                     isLogging = false;
                     changeButtonContent(isLogging);
                     signInInterface.Show();
@@ -71,10 +64,10 @@ namespace Winform_Final.Global
                     isLogging = true;
                     changeButtonContent(isLogging);
                     loginInterface.Show();
-                    break;;
-                
+                    break; ;
+
             }
-            
+
         }
     }
 }

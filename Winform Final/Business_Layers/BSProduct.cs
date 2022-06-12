@@ -1,11 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
+﻿
 using System.Data;
-using System.Data.SqlClient;
 using Winform_Final.DBLayers;
 
 namespace Winform_Final.Business_Layers
@@ -29,8 +23,11 @@ namespace Winform_Final.Business_Layers
         {
             return db.ExecuteQueryDataSet("select ID, ProductName, price from PRODUCT where Category='Drink'", CommandType.Text);
         }
-
-        public DataSet getProductsTable()
+        public DataSet countProducts()
+        {
+            return db.ExecuteQueryDataSet("Count * from PRODUCT", CommandType.Text);
+        }
+        public DataSet getProductsFullDetail()
         {
             return db.ExecuteQueryDataSet("select * from PRODUCT", CommandType.Text);
         }
