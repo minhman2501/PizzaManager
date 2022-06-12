@@ -38,8 +38,8 @@
             this.loginBtn = new System.Windows.Forms.Button();
             this.cancleBtn = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
-            this.clientCheckBox = new System.Windows.Forms.CheckBox();
-            this.adminCheckBox = new System.Windows.Forms.CheckBox();
+            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -165,25 +165,27 @@
             this.label4.TabIndex = 0;
             this.label4.Text = "Login as:";
             // 
-            // clientCheckBox
+            // radioButton1
             // 
-            this.clientCheckBox.AutoSize = true;
-            this.clientCheckBox.Location = new System.Drawing.Point(172, 375);
-            this.clientCheckBox.Name = "clientCheckBox";
-            this.clientCheckBox.Size = new System.Drawing.Size(62, 20);
-            this.clientCheckBox.TabIndex = 4;
-            this.clientCheckBox.Text = "Client";
-            this.clientCheckBox.UseVisualStyleBackColor = true;
+            this.radioButton1.AutoSize = true;
+            this.radioButton1.Location = new System.Drawing.Point(150, 373);
+            this.radioButton1.Name = "radioButton1";
+            this.radioButton1.Size = new System.Drawing.Size(61, 20);
+            this.radioButton1.TabIndex = 4;
+            this.radioButton1.TabStop = true;
+            this.radioButton1.Text = "Client";
+            this.radioButton1.UseVisualStyleBackColor = true;
             // 
-            // adminCheckBox
+            // radioButton2
             // 
-            this.adminCheckBox.AutoSize = true;
-            this.adminCheckBox.Location = new System.Drawing.Point(254, 374);
-            this.adminCheckBox.Name = "adminCheckBox";
-            this.adminCheckBox.Size = new System.Drawing.Size(107, 20);
-            this.adminCheckBox.TabIndex = 4;
-            this.adminCheckBox.Text = "Administrator";
-            this.adminCheckBox.UseVisualStyleBackColor = true;
+            this.radioButton2.AutoSize = true;
+            this.radioButton2.Location = new System.Drawing.Point(244, 373);
+            this.radioButton2.Name = "radioButton2";
+            this.radioButton2.Size = new System.Drawing.Size(106, 20);
+            this.radioButton2.TabIndex = 4;
+            this.radioButton2.TabStop = true;
+            this.radioButton2.Text = "Administrator";
+            this.radioButton2.UseVisualStyleBackColor = true;
             // 
             // LoginAccount
             // 
@@ -191,8 +193,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(237)))), ((int)(((byte)(239)))));
             this.ClientSize = new System.Drawing.Size(520, 660);
-            this.Controls.Add(this.adminCheckBox);
-            this.Controls.Add(this.clientCheckBox);
+            this.Controls.Add(this.radioButton2);
+            this.Controls.Add(this.radioButton1);
             this.Controls.Add(this.cancleBtn);
             this.Controls.Add(this.loginBtn);
             this.Controls.Add(this.panel2);
@@ -226,7 +228,7 @@
         private System.Windows.Forms.Button loginBtn;
         private System.Windows.Forms.Button cancleBtn;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.CheckBox clientCheckBox;
-        private System.Windows.Forms.CheckBox adminCheckBox;
+        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.RadioButton radioButton2;
     }
 }

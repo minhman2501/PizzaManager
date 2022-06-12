@@ -54,6 +54,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Business_Layers\BSProduct.cs" />
+    <Compile Include="Business_Layers\BSUser.cs" />
     <Compile Include="Class Folder\Class Object\Drink.cs" />
     <Compile Include="Class Folder\Class Object\Product.cs" />
     <Compile Include="Interfaces\Administrator Interfaces\MainAdminInterfaces.cs">

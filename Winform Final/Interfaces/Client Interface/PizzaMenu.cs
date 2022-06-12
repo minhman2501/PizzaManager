@@ -23,7 +23,7 @@ namespace Winform_Final.Client_Interface
 
         BSProduct productDatbase = new BSProduct();
         DataSet dataset;
-        DataSet productFull;
+        
 
         public PizzaMenu()
         {
@@ -38,9 +38,9 @@ namespace Winform_Final.Client_Interface
                 dtProduct.Clear();
 
                 dataset = productDatbase.getProducts();
-                productFull = productDatbase.getProductFullDetail();
-
+   
                 dtProduct = dataset.Tables[0];
+                
                 
                 foodGridView.DataSource = dtProduct;
                 foodGridView.AutoResizeColumns();
