@@ -47,19 +47,22 @@
             this.wrapperPanel.Controls.Add(this.contentPanel);
             this.wrapperPanel.Location = new System.Drawing.Point(12, 76);
             this.wrapperPanel.Name = "wrapperPanel";
-            this.wrapperPanel.Size = new System.Drawing.Size(551, 686);
+            this.wrapperPanel.Size = new System.Drawing.Size(609, 686);
             this.wrapperPanel.TabIndex = 0;
             // 
             // changeBtn
             // 
             this.changeBtn.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.changeBtn.BackColor = System.Drawing.SystemColors.Control;
+            this.changeBtn.FlatAppearance.BorderSize = 0;
+            this.changeBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.changeBtn.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.changeBtn.Location = new System.Drawing.Point(160, 609);
+            this.changeBtn.Location = new System.Drawing.Point(321, 627);
             this.changeBtn.Name = "changeBtn";
-            this.changeBtn.Size = new System.Drawing.Size(258, 54);
+            this.changeBtn.Size = new System.Drawing.Size(214, 45);
             this.changeBtn.TabIndex = 1;
             this.changeBtn.Text = "[change content]";
-            this.changeBtn.UseVisualStyleBackColor = true;
+            this.changeBtn.UseVisualStyleBackColor = false;
             this.changeBtn.Click += new System.EventHandler(this.changeBtn_Click);
             // 
             // askingLB
@@ -67,7 +70,7 @@
             this.askingLB.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.askingLB.AutoSize = true;
             this.askingLB.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.askingLB.Location = new System.Drawing.Point(20, 575);
+            this.askingLB.Location = new System.Drawing.Point(22, 640);
             this.askingLB.Name = "askingLB";
             this.askingLB.Size = new System.Drawing.Size(120, 21);
             this.askingLB.TabIndex = 0;
@@ -75,10 +78,11 @@
             // 
             // contentPanel
             // 
+            this.contentPanel.AutoScroll = true;
             this.contentPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.contentPanel.Location = new System.Drawing.Point(0, 0);
             this.contentPanel.Name = "contentPanel";
-            this.contentPanel.Size = new System.Drawing.Size(551, 551);
+            this.contentPanel.Size = new System.Drawing.Size(609, 603);
             this.contentPanel.TabIndex = 0;
             // 
             // exitBtn
@@ -89,7 +93,7 @@
             this.exitBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.exitBtn.Font = new System.Drawing.Font("MV Boli", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.exitBtn.ForeColor = System.Drawing.Color.White;
-            this.exitBtn.Location = new System.Drawing.Point(515, -9);
+            this.exitBtn.Location = new System.Drawing.Point(573, -9);
             this.exitBtn.Name = "exitBtn";
             this.exitBtn.Size = new System.Drawing.Size(63, 61);
             this.exitBtn.TabIndex = 1;
@@ -103,7 +107,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Winform_Final.Properties.Resources.Login;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(575, 838);
+            this.ClientSize = new System.Drawing.Size(633, 838);
             this.Controls.Add(this.exitBtn);
             this.Controls.Add(this.wrapperPanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;

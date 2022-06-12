@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label2 = new System.Windows.Forms.Label();
             this.PizzaListBtn = new System.Windows.Forms.Button();
             this.DrinkListBtn = new System.Windows.Forms.Button();
@@ -36,7 +36,6 @@
             this.foodListPanel = new System.Windows.Forms.Panel();
             this.foodGridView = new System.Windows.Forms.DataGridView();
             this.select = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.testBtn = new FontAwesome.Sharp.IconButton();
             this.addBtn = new FontAwesome.Sharp.IconButton();
             this.cartPanel = new System.Windows.Forms.Panel();
             this.deleteBtn = new FontAwesome.Sharp.IconButton();
@@ -71,7 +70,7 @@
             this.PizzaListBtn.BackColor = System.Drawing.Color.White;
             this.PizzaListBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.PizzaListBtn.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PizzaListBtn.Location = new System.Drawing.Point(12, 82);
+            this.PizzaListBtn.Location = new System.Drawing.Point(15, 148);
             this.PizzaListBtn.Name = "PizzaListBtn";
             this.PizzaListBtn.Size = new System.Drawing.Size(134, 49);
             this.PizzaListBtn.TabIndex = 1;
@@ -84,7 +83,7 @@
             this.DrinkListBtn.BackColor = System.Drawing.Color.White;
             this.DrinkListBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.DrinkListBtn.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DrinkListBtn.Location = new System.Drawing.Point(152, 82);
+            this.DrinkListBtn.Location = new System.Drawing.Point(158, 148);
             this.DrinkListBtn.Name = "DrinkListBtn";
             this.DrinkListBtn.Size = new System.Drawing.Size(134, 49);
             this.DrinkListBtn.TabIndex = 1;
@@ -112,16 +111,17 @@
             this.foodListPanel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.foodListPanel.Controls.Add(this.foodGridView);
-            this.foodListPanel.Controls.Add(this.testBtn);
             this.foodListPanel.Controls.Add(this.addBtn);
-            this.foodListPanel.Location = new System.Drawing.Point(12, 137);
+            this.foodListPanel.Location = new System.Drawing.Point(12, 203);
             this.foodListPanel.Name = "foodListPanel";
-            this.foodListPanel.Size = new System.Drawing.Size(638, 575);
+            this.foodListPanel.Size = new System.Drawing.Size(638, 509);
             this.foodListPanel.TabIndex = 5;
             // 
             // foodGridView
             // 
             this.foodGridView.AllowUserToAddRows = false;
+            this.foodGridView.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.foodGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.foodGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.select});
@@ -131,7 +131,7 @@
             this.foodGridView.RowHeadersWidth = 51;
             this.foodGridView.RowTemplate.Height = 24;
             this.foodGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.foodGridView.Size = new System.Drawing.Size(632, 427);
+            this.foodGridView.Size = new System.Drawing.Size(632, 410);
             this.foodGridView.TabIndex = 5;
             this.foodGridView.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.foodGridView_CellContentDoubleClick);
             this.foodGridView.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.foodGridView_CellDoubleClick);
@@ -144,29 +144,6 @@
             this.select.Name = "select";
             this.select.ReadOnly = true;
             this.select.Width = 125;
-            // 
-            // testBtn
-            // 
-            this.testBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.testBtn.BackColor = System.Drawing.Color.White;
-            this.testBtn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(134)))), ((int)(((byte)(0)))));
-            this.testBtn.FlatAppearance.BorderSize = 2;
-            this.testBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.testBtn.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.testBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(134)))), ((int)(((byte)(0)))));
-            this.testBtn.IconChar = FontAwesome.Sharp.IconChar.CartPlus;
-            this.testBtn.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(134)))), ((int)(((byte)(0)))));
-            this.testBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.testBtn.IconSize = 40;
-            this.testBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.testBtn.Location = new System.Drawing.Point(306, 511);
-            this.testBtn.Name = "testBtn";
-            this.testBtn.Size = new System.Drawing.Size(156, 61);
-            this.testBtn.TabIndex = 4;
-            this.testBtn.Text = "test";
-            this.testBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.testBtn.UseVisualStyleBackColor = false;
-            this.testBtn.Click += new System.EventHandler(this.testBtn_Click);
             // 
             // addBtn
             // 
@@ -182,7 +159,7 @@
             this.addBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.addBtn.IconSize = 40;
             this.addBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.addBtn.Location = new System.Drawing.Point(479, 511);
+            this.addBtn.Location = new System.Drawing.Point(479, 445);
             this.addBtn.Name = "addBtn";
             this.addBtn.Size = new System.Drawing.Size(156, 61);
             this.addBtn.TabIndex = 4;
@@ -287,8 +264,8 @@
             // 
             this.cartGridView.AllowUserToAddRows = false;
             this.cartGridView.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle1.Padding = new System.Windows.Forms.Padding(0, 10, 0, 0);
-            this.cartGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.Padding = new System.Windows.Forms.Padding(0, 10, 0, 0);
+            this.cartGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
             this.cartGridView.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -374,7 +351,6 @@
         private System.Windows.Forms.DataGridView cartGridView;
         private FontAwesome.Sharp.IconButton addBtn;
         private System.Windows.Forms.Panel foodListPanel;
-        private FontAwesome.Sharp.IconButton testBtn;
         private System.Windows.Forms.DataGridView foodGridView;
         private System.Windows.Forms.DataGridViewCheckBoxColumn select;
         private System.Windows.Forms.DataGridViewTextBoxColumn cart_itemName;

@@ -32,12 +32,12 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.contentPanel = new System.Windows.Forms.Panel();
+            this.OrderBtn = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.OrderBtn = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.contentPanel.SuspendLayout();
@@ -54,19 +54,24 @@
             // 
             // panel2
             // 
+            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panel2.BackColor = System.Drawing.Color.Red;
             this.panel2.Controls.Add(this.pictureBox1);
             this.panel2.Location = new System.Drawing.Point(76, 1);
+            this.panel2.MaximumSize = new System.Drawing.Size(150, 300);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(128, 149);
             this.panel2.TabIndex = 1;
             // 
             // pictureBox1
             // 
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox1.Image = global::Winform_Final.Properties.Resources.pizzalogo;
-            this.pictureBox1.Location = new System.Drawing.Point(16, 12);
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(100, 134);
+            this.pictureBox1.Size = new System.Drawing.Size(128, 149);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
@@ -86,6 +91,21 @@
             this.contentPanel.Name = "contentPanel";
             this.contentPanel.Size = new System.Drawing.Size(936, 621);
             this.contentPanel.TabIndex = 3;
+            // 
+            // OrderBtn
+            // 
+            this.OrderBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.OrderBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(186)))), ((int)(((byte)(12)))), ((int)(((byte)(12)))));
+            this.OrderBtn.FlatAppearance.BorderSize = 0;
+            this.OrderBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.OrderBtn.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.OrderBtn.ForeColor = System.Drawing.Color.White;
+            this.OrderBtn.Location = new System.Drawing.Point(51, 533);
+            this.OrderBtn.Name = "OrderBtn";
+            this.OrderBtn.Size = new System.Drawing.Size(286, 56);
+            this.OrderBtn.TabIndex = 2;
+            this.OrderBtn.Text = "Order Now";
+            this.OrderBtn.UseVisualStyleBackColor = false;
             // 
             // label5
             // 
@@ -151,21 +171,6 @@
             this.label1.Size = new System.Drawing.Size(198, 76);
             this.label1.TabIndex = 0;
             this.label1.Text = "Pizza";
-            // 
-            // OrderBtn
-            // 
-            this.OrderBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.OrderBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(186)))), ((int)(((byte)(12)))), ((int)(((byte)(12)))));
-            this.OrderBtn.FlatAppearance.BorderSize = 0;
-            this.OrderBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.OrderBtn.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.OrderBtn.ForeColor = System.Drawing.Color.White;
-            this.OrderBtn.Location = new System.Drawing.Point(51, 533);
-            this.OrderBtn.Name = "OrderBtn";
-            this.OrderBtn.Size = new System.Drawing.Size(286, 56);
-            this.OrderBtn.TabIndex = 2;
-            this.OrderBtn.Text = "Order Now";
-            this.OrderBtn.UseVisualStyleBackColor = false;
             // 
             // HomeScreen
             // 

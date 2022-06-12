@@ -40,7 +40,7 @@ namespace Winform_Final.DBLayers
             if (conn.State == ConnectionState.Open)
                 conn.Close();
             conn.Open();
-            comm.CommandText = strSQL;
+            comm.CommandText = strSQL;  
             comm.CommandType = ct;
             try
             {
@@ -56,6 +56,28 @@ namespace Winform_Final.DBLayers
                 conn.Close();
             }
             return f;
+        }
+        public int ExecuteCount(string strSQL, CommandType ct, ref string error)
+        {
+            Int32 count = -1;
+            if (conn.State == ConnectionState.Open)
+                conn.Close();
+            conn.Open();
+            comm.CommandText = strSQL;
+            comm.CommandType = ct;
+            try
+            {
+                count = Convert.ToInt32(comm.ExecuteScalar());
+            }
+            catch (SqlException ex)
+            {
+                error = ex.Message;
+            }
+            finally
+            {
+                conn.Close();
+            }
+            return count;
         }
     }
 }

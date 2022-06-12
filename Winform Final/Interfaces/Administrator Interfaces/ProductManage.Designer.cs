@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.wrapperPanel = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -37,25 +38,29 @@
             this.totalProductLabel = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.productListPanel = new System.Windows.Forms.Panel();
-            this.iconButton2 = new FontAwesome.Sharp.IconButton();
-            this.iconButton1 = new FontAwesome.Sharp.IconButton();
+            this.editBtn = new FontAwesome.Sharp.IconButton();
+            this.deleteBtn = new FontAwesome.Sharp.IconButton();
             this.addBtn = new FontAwesome.Sharp.IconButton();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.productGridView = new System.Windows.Forms.DataGridView();
             this.label4 = new System.Windows.Forms.Label();
             this.addProductPanel = new System.Windows.Forms.Panel();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.newProductCategoryCb = new System.Windows.Forms.ComboBox();
+            this.newProductPriceTxt = new System.Windows.Forms.TextBox();
+            this.newProductNameTxt = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.iconButton4 = new FontAwesome.Sharp.IconButton();
-            this.iconButton3 = new FontAwesome.Sharp.IconButton();
+            this.cancelBtn = new FontAwesome.Sharp.IconButton();
+            this.saveBtn = new FontAwesome.Sharp.IconButton();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.idProductLB = new System.Windows.Forms.Label();
+            this.dBMainBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.wrapperPanel.SuspendLayout();
             this.productListPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.productGridView)).BeginInit();
             this.addProductPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dBMainBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // wrapperPanel
@@ -73,7 +78,6 @@
             this.wrapperPanel.Name = "wrapperPanel";
             this.wrapperPanel.Size = new System.Drawing.Size(950, 197);
             this.wrapperPanel.TabIndex = 0;
-            this.wrapperPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // label5
             // 
@@ -161,57 +165,58 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.productListPanel.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.productListPanel.Controls.Add(this.iconButton2);
-            this.productListPanel.Controls.Add(this.iconButton1);
+            this.productListPanel.Controls.Add(this.editBtn);
+            this.productListPanel.Controls.Add(this.deleteBtn);
             this.productListPanel.Controls.Add(this.addBtn);
-            this.productListPanel.Controls.Add(this.dataGridView1);
+            this.productListPanel.Controls.Add(this.productGridView);
             this.productListPanel.Controls.Add(this.label4);
             this.productListPanel.Location = new System.Drawing.Point(12, 203);
             this.productListPanel.Name = "productListPanel";
             this.productListPanel.Size = new System.Drawing.Size(523, 457);
             this.productListPanel.TabIndex = 1;
             // 
-            // iconButton2
+            // editBtn
             // 
-            this.iconButton2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.iconButton2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(143)))), ((int)(((byte)(140)))), ((int)(((byte)(0)))));
-            this.iconButton2.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.iconButton2.FlatAppearance.BorderSize = 0;
-            this.iconButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton2.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.iconButton2.ForeColor = System.Drawing.Color.White;
-            this.iconButton2.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.iconButton2.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(134)))), ((int)(((byte)(0)))));
-            this.iconButton2.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton2.IconSize = 40;
-            this.iconButton2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton2.Location = new System.Drawing.Point(426, 401);
-            this.iconButton2.Name = "iconButton2";
-            this.iconButton2.Size = new System.Drawing.Size(94, 38);
-            this.iconButton2.TabIndex = 5;
-            this.iconButton2.Text = "Edit";
-            this.iconButton2.UseVisualStyleBackColor = false;
+            this.editBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.editBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(143)))), ((int)(((byte)(140)))), ((int)(((byte)(0)))));
+            this.editBtn.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.editBtn.FlatAppearance.BorderSize = 0;
+            this.editBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.editBtn.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.editBtn.ForeColor = System.Drawing.Color.White;
+            this.editBtn.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.editBtn.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(134)))), ((int)(((byte)(0)))));
+            this.editBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.editBtn.IconSize = 40;
+            this.editBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.editBtn.Location = new System.Drawing.Point(426, 401);
+            this.editBtn.Name = "editBtn";
+            this.editBtn.Size = new System.Drawing.Size(94, 38);
+            this.editBtn.TabIndex = 5;
+            this.editBtn.Text = "Edit";
+            this.editBtn.UseVisualStyleBackColor = false;
+            this.editBtn.Click += new System.EventHandler(this.editBtn_Click);
             // 
-            // iconButton1
+            // deleteBtn
             // 
-            this.iconButton1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.iconButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(5)))), ((int)(((byte)(44)))));
-            this.iconButton1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(134)))), ((int)(((byte)(0)))));
-            this.iconButton1.FlatAppearance.BorderSize = 0;
-            this.iconButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton1.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.iconButton1.ForeColor = System.Drawing.Color.White;
-            this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.iconButton1.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(134)))), ((int)(((byte)(0)))));
-            this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton1.IconSize = 40;
-            this.iconButton1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton1.Location = new System.Drawing.Point(317, 401);
-            this.iconButton1.Name = "iconButton1";
-            this.iconButton1.Size = new System.Drawing.Size(94, 38);
-            this.iconButton1.TabIndex = 5;
-            this.iconButton1.Text = "Delete";
-            this.iconButton1.UseVisualStyleBackColor = false;
+            this.deleteBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.deleteBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(5)))), ((int)(((byte)(44)))));
+            this.deleteBtn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(134)))), ((int)(((byte)(0)))));
+            this.deleteBtn.FlatAppearance.BorderSize = 0;
+            this.deleteBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.deleteBtn.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.deleteBtn.ForeColor = System.Drawing.Color.White;
+            this.deleteBtn.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.deleteBtn.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(134)))), ((int)(((byte)(0)))));
+            this.deleteBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.deleteBtn.IconSize = 40;
+            this.deleteBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.deleteBtn.Location = new System.Drawing.Point(317, 401);
+            this.deleteBtn.Name = "deleteBtn";
+            this.deleteBtn.Size = new System.Drawing.Size(94, 38);
+            this.deleteBtn.TabIndex = 5;
+            this.deleteBtn.Text = "Delete";
+            this.deleteBtn.UseVisualStyleBackColor = false;
             // 
             // addBtn
             // 
@@ -235,18 +240,23 @@
             this.addBtn.UseVisualStyleBackColor = false;
             this.addBtn.Click += new System.EventHandler(this.addBtn_Click);
             // 
-            // dataGridView1
+            // productGridView
             // 
-            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.productGridView.AllowUserToAddRows = false;
+            this.productGridView.AllowUserToDeleteRows = false;
+            this.productGridView.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(3, 63);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(517, 310);
-            this.dataGridView1.TabIndex = 2;
+            this.productGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.productGridView.Location = new System.Drawing.Point(3, 63);
+            this.productGridView.Name = "productGridView";
+            this.productGridView.ReadOnly = true;
+            this.productGridView.RowHeadersWidth = 51;
+            this.productGridView.RowTemplate.Height = 24;
+            this.productGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.productGridView.Size = new System.Drawing.Size(517, 310);
+            this.productGridView.TabIndex = 2;
+            this.productGridView.MouseClick += new System.Windows.Forms.MouseEventHandler(this.productGridView_MouseClick);
             // 
             // label4
             // 
@@ -265,13 +275,15 @@
             this.addProductPanel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.addProductPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(201)))), ((int)(((byte)(240)))), ((int)(((byte)(247)))));
-            this.addProductPanel.Controls.Add(this.comboBox1);
-            this.addProductPanel.Controls.Add(this.textBox2);
-            this.addProductPanel.Controls.Add(this.textBox1);
+            this.addProductPanel.Controls.Add(this.newProductCategoryCb);
+            this.addProductPanel.Controls.Add(this.newProductPriceTxt);
+            this.addProductPanel.Controls.Add(this.newProductNameTxt);
             this.addProductPanel.Controls.Add(this.label9);
             this.addProductPanel.Controls.Add(this.label8);
-            this.addProductPanel.Controls.Add(this.iconButton4);
-            this.addProductPanel.Controls.Add(this.iconButton3);
+            this.addProductPanel.Controls.Add(this.cancelBtn);
+            this.addProductPanel.Controls.Add(this.saveBtn);
+            this.addProductPanel.Controls.Add(this.idProductLB);
+            this.addProductPanel.Controls.Add(this.label10);
             this.addProductPanel.Controls.Add(this.label7);
             this.addProductPanel.Controls.Add(this.label6);
             this.addProductPanel.Location = new System.Drawing.Point(552, 203);
@@ -279,42 +291,42 @@
             this.addProductPanel.Size = new System.Drawing.Size(386, 457);
             this.addProductPanel.TabIndex = 1;
             // 
-            // comboBox1
+            // newProductCategoryCb
             // 
-            this.comboBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.newProductCategoryCb.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.comboBox1.BackColor = System.Drawing.Color.White;
-            this.comboBox1.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.newProductCategoryCb.BackColor = System.Drawing.Color.White;
+            this.newProductCategoryCb.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.newProductCategoryCb.Items.AddRange(new object[] {
             "Pizza",
-            "Drinks"});
-            this.comboBox1.Location = new System.Drawing.Point(29, 187);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(345, 29);
-            this.comboBox1.TabIndex = 7;
+            "Drink"});
+            this.newProductCategoryCb.Location = new System.Drawing.Point(29, 216);
+            this.newProductCategoryCb.Name = "newProductCategoryCb";
+            this.newProductCategoryCb.Size = new System.Drawing.Size(345, 29);
+            this.newProductCategoryCb.TabIndex = 7;
             // 
-            // textBox2
+            // newProductPriceTxt
             // 
-            this.textBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.newProductPriceTxt.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox2.BackColor = System.Drawing.Color.White;
-            this.textBox2.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(29, 281);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(345, 28);
-            this.textBox2.TabIndex = 6;
+            this.newProductPriceTxt.BackColor = System.Drawing.Color.White;
+            this.newProductPriceTxt.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.newProductPriceTxt.Location = new System.Drawing.Point(29, 310);
+            this.newProductPriceTxt.Name = "newProductPriceTxt";
+            this.newProductPriceTxt.Size = new System.Drawing.Size(345, 28);
+            this.newProductPriceTxt.TabIndex = 6;
             // 
-            // textBox1
+            // newProductNameTxt
             // 
-            this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.newProductNameTxt.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox1.BackColor = System.Drawing.Color.White;
-            this.textBox1.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(29, 102);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(345, 28);
-            this.textBox1.TabIndex = 6;
+            this.newProductNameTxt.BackColor = System.Drawing.Color.White;
+            this.newProductNameTxt.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.newProductNameTxt.Location = new System.Drawing.Point(29, 130);
+            this.newProductNameTxt.Name = "newProductNameTxt";
+            this.newProductNameTxt.Size = new System.Drawing.Size(345, 28);
+            this.newProductNameTxt.TabIndex = 6;
+            this.newProductNameTxt.TextChanged += new System.EventHandler(this.newProductNameTxt_TextChanged);
             // 
             // label9
             // 
@@ -322,7 +334,7 @@
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(4)))), ((int)(((byte)(94)))));
-            this.label9.Location = new System.Drawing.Point(25, 161);
+            this.label9.Location = new System.Drawing.Point(25, 190);
             this.label9.Name = "label9";
             this.label9.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.label9.Size = new System.Drawing.Size(108, 23);
@@ -335,54 +347,56 @@
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(4)))), ((int)(((byte)(94)))));
-            this.label8.Location = new System.Drawing.Point(25, 255);
+            this.label8.Location = new System.Drawing.Point(25, 284);
             this.label8.Name = "label8";
             this.label8.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.label8.Size = new System.Drawing.Size(62, 23);
             this.label8.TabIndex = 1;
             this.label8.Text = "Price:";
             // 
-            // iconButton4
+            // cancelBtn
             // 
-            this.iconButton4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.iconButton4.BackColor = System.Drawing.Color.White;
-            this.iconButton4.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(4)))), ((int)(((byte)(40)))));
-            this.iconButton4.FlatAppearance.BorderSize = 2;
-            this.iconButton4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton4.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.iconButton4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(4)))), ((int)(((byte)(40)))));
-            this.iconButton4.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.iconButton4.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(134)))), ((int)(((byte)(0)))));
-            this.iconButton4.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton4.IconSize = 40;
-            this.iconButton4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton4.Location = new System.Drawing.Point(164, 401);
-            this.iconButton4.Name = "iconButton4";
-            this.iconButton4.Size = new System.Drawing.Size(102, 38);
-            this.iconButton4.TabIndex = 5;
-            this.iconButton4.Text = "Cancel";
-            this.iconButton4.UseVisualStyleBackColor = false;
+            this.cancelBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.cancelBtn.BackColor = System.Drawing.Color.White;
+            this.cancelBtn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(4)))), ((int)(((byte)(40)))));
+            this.cancelBtn.FlatAppearance.BorderSize = 2;
+            this.cancelBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cancelBtn.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cancelBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(4)))), ((int)(((byte)(40)))));
+            this.cancelBtn.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.cancelBtn.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(134)))), ((int)(((byte)(0)))));
+            this.cancelBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.cancelBtn.IconSize = 40;
+            this.cancelBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.cancelBtn.Location = new System.Drawing.Point(164, 401);
+            this.cancelBtn.Name = "cancelBtn";
+            this.cancelBtn.Size = new System.Drawing.Size(102, 38);
+            this.cancelBtn.TabIndex = 5;
+            this.cancelBtn.Text = "Cancel";
+            this.cancelBtn.UseVisualStyleBackColor = false;
+            this.cancelBtn.Click += new System.EventHandler(this.cancelBtn_Click);
             // 
-            // iconButton3
+            // saveBtn
             // 
-            this.iconButton3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.iconButton3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(134)))), ((int)(((byte)(0)))));
-            this.iconButton3.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(134)))), ((int)(((byte)(0)))));
-            this.iconButton3.FlatAppearance.BorderSize = 2;
-            this.iconButton3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton3.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.iconButton3.ForeColor = System.Drawing.Color.White;
-            this.iconButton3.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.iconButton3.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(134)))), ((int)(((byte)(0)))));
-            this.iconButton3.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton3.IconSize = 40;
-            this.iconButton3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton3.Location = new System.Drawing.Point(272, 401);
-            this.iconButton3.Name = "iconButton3";
-            this.iconButton3.Size = new System.Drawing.Size(102, 38);
-            this.iconButton3.TabIndex = 5;
-            this.iconButton3.Text = "Save";
-            this.iconButton3.UseVisualStyleBackColor = false;
+            this.saveBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.saveBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(134)))), ((int)(((byte)(0)))));
+            this.saveBtn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(134)))), ((int)(((byte)(0)))));
+            this.saveBtn.FlatAppearance.BorderSize = 2;
+            this.saveBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.saveBtn.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.saveBtn.ForeColor = System.Drawing.Color.White;
+            this.saveBtn.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.saveBtn.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(134)))), ((int)(((byte)(0)))));
+            this.saveBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.saveBtn.IconSize = 40;
+            this.saveBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.saveBtn.Location = new System.Drawing.Point(272, 401);
+            this.saveBtn.Name = "saveBtn";
+            this.saveBtn.Size = new System.Drawing.Size(102, 38);
+            this.saveBtn.TabIndex = 5;
+            this.saveBtn.Text = "Save";
+            this.saveBtn.UseVisualStyleBackColor = false;
+            this.saveBtn.Click += new System.EventHandler(this.saveBtn_Click);
             // 
             // label7
             // 
@@ -390,7 +404,7 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(4)))), ((int)(((byte)(94)))));
-            this.label7.Location = new System.Drawing.Point(25, 76);
+            this.label7.Location = new System.Drawing.Point(25, 104);
             this.label7.Name = "label7";
             this.label7.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.label7.Size = new System.Drawing.Size(76, 23);
@@ -410,6 +424,35 @@
             this.label6.TabIndex = 1;
             this.label6.Text = "Add/Edit Product";
             // 
+            // label10
+            // 
+            this.label10.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(4)))), ((int)(((byte)(94)))));
+            this.label10.Location = new System.Drawing.Point(190, 63);
+            this.label10.Name = "label10";
+            this.label10.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.label10.Size = new System.Drawing.Size(35, 23);
+            this.label10.TabIndex = 1;
+            this.label10.Text = "ID:";
+            // 
+            // idProductLB
+            // 
+            this.idProductLB.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.idProductLB.AutoSize = true;
+            this.idProductLB.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.idProductLB.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(4)))), ((int)(((byte)(94)))));
+            this.idProductLB.Location = new System.Drawing.Point(231, 63);
+            this.idProductLB.Name = "idProductLB";
+            this.idProductLB.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.idProductLB.Size = new System.Drawing.Size(0, 23);
+            this.idProductLB.TabIndex = 1;
+            // 
+            // dBMainBindingSource
+            // 
+            this.dBMainBindingSource.DataSource = typeof(Winform_Final.DBLayers.DBMain);
+            // 
             // ProductManage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -422,13 +465,15 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ProductManage";
             this.Text = "ProductManage";
+            this.Load += new System.EventHandler(this.ProductManage_Load);
             this.wrapperPanel.ResumeLayout(false);
             this.wrapperPanel.PerformLayout();
             this.productListPanel.ResumeLayout(false);
             this.productListPanel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.productGridView)).EndInit();
             this.addProductPanel.ResumeLayout(false);
             this.addProductPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dBMainBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -444,20 +489,23 @@
         private System.Windows.Forms.Label totalProductLabel;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel productListPanel;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView productGridView;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Panel addProductPanel;
         private System.Windows.Forms.Label label6;
         private FontAwesome.Sharp.IconButton addBtn;
-        private FontAwesome.Sharp.IconButton iconButton2;
-        private FontAwesome.Sharp.IconButton iconButton1;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private FontAwesome.Sharp.IconButton editBtn;
+        private FontAwesome.Sharp.IconButton deleteBtn;
+        private System.Windows.Forms.ComboBox newProductCategoryCb;
+        private System.Windows.Forms.TextBox newProductPriceTxt;
+        private System.Windows.Forms.TextBox newProductNameTxt;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
-        private FontAwesome.Sharp.IconButton iconButton4;
-        private FontAwesome.Sharp.IconButton iconButton3;
+        private FontAwesome.Sharp.IconButton cancelBtn;
+        private FontAwesome.Sharp.IconButton saveBtn;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.BindingSource dBMainBindingSource;
+        private System.Windows.Forms.Label idProductLB;
+        private System.Windows.Forms.Label label10;
     }
 }

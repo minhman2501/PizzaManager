@@ -23,7 +23,7 @@ namespace Winform_Final.Client_Interface
 
         BSProduct productDatbase = new BSProduct();
         DataSet dataset;
-        DataSet productFull;
+        
 
         public PizzaMenu()
         {
@@ -36,18 +36,14 @@ namespace Winform_Final.Client_Interface
             {
                 dtProduct = new DataTable();
                 dtProduct.Clear();
-                
 
                 dataset = productDatbase.getProducts();
-                productFull = productDatbase.getProductsTable();
-
+   
                 dtProduct = dataset.Tables[0];
-
+                
                 
                 foodGridView.DataSource = dtProduct;
                 foodGridView.AutoResizeColumns();
-
-                        
 
             }
             catch (SqlException)
@@ -59,12 +55,6 @@ namespace Winform_Final.Client_Interface
         {
             LoadData();
         }
-
-        private void testBtn_Click(object sender, EventArgs e)
-        {
-            LoadData();
-        }
-
         private void foodGridView_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
 
@@ -91,8 +81,6 @@ namespace Winform_Final.Client_Interface
 
         private void addBtn_Click(object sender, EventArgs e)
         {
-
-            int selectedIndex = foodGridView.CurrentCell.RowIndex;
             int amount = 1;
             foreach (DataGridViewRow item in foodGridView.Rows)
             {
@@ -102,7 +90,6 @@ namespace Winform_Final.Client_Interface
                 }
                 if ((bool)item.Cells[0].Value == true)
                 {
-                    
                     foreach (DataGridViewRow cart_item in cartGridView.Rows)
                     {
                         amount = Convert.ToInt32(cart_item.Cells["cart_itemAmount"].Value);
@@ -117,13 +104,12 @@ namespace Winform_Final.Client_Interface
                             amount = 1;
                             continue;
                         }
-                        
                     }
                     if (amount == 1)
                     {
                         int n = cartGridView.Rows.Add();
                         cartGridView.Rows[n].Cells["cart_itemName"].Value = item.Cells["ProductName"].Value.ToString();
-                        cartGridView.Rows[n].Cells["cart_itemCategory"].Value = productFull.Tables[0].Rows[item.Index]["Category"].ToString();
+                        cartGridView.Rows[n].Cells["cart_itemCategory"].Value = item.Cells["Category"].Value.ToString();
                         cartGridView.Rows[n].Cells["cart_itemPrice"].Value = item.Cells["Price"].Value.ToString();
                         cartGridView.Rows[n].Cells["cart_itemAmount"].Value = amount.ToString();
                     }
@@ -131,20 +117,9 @@ namespace Winform_Final.Client_Interface
 
             }
         }
-        private int increaseAmount(String source, String compare, int current)
-        {
-            if(current != 1)
-            {
-                int amount = 0;
-                if (source.Equals(compare)) amount++;
-                return amount + current;
-            }
-            
-            return 1;
-        }
         private void PizzaListBtn_Click(object sender, EventArgs e)
         {
-            dataset = productDatbase.getPizza();
+            dataset = productDatbase.getProduct_baseOnCategory("Pizza");
             dtProduct = dataset.Tables[0];
             foodGridView.DataSource = dtProduct;
             foodGridView.AutoResizeColumns();
@@ -152,7 +127,7 @@ namespace Winform_Final.Client_Interface
 
         private void DrinkListBtn_Click(object sender, EventArgs e)
         {
-            dataset = productDatbase.getDrink();
+            dataset = productDatbase.getProduct_baseOnCategory("Drink");
             dtProduct = dataset.Tables[0];
             foodGridView.DataSource = dtProduct;
             foodGridView.AutoResizeColumns();
@@ -170,14 +145,26 @@ namespace Winform_Final.Client_Interface
 
         private void confirmBtn_Click(object sender, EventArgs e)
         {
+            string type;
             List<Product> itemList = new List<Product>();
             foreach(DataGridViewRow item in cartGridView.Rows)
             {
-                itemList.Add(new Product(item.Cells["cart_itemName"].Value.ToString(), Convert.ToInt32(item.Cells["cart_itemPrice"].Value), Convert.ToInt32(item.Cells["cart_itemAmount"].Value)));
+                type = item.Cells["cart_itemCategory"].Value.ToString();
+                switch(type)
+                {
+                    case "Pizza":
+                        itemList.Add(new Pizza(item.Cells["cart_itemName"].Value.ToString(), Convert.ToInt32(item.Cells["cart_itemPrice"].Value), Convert.ToInt32(item.Cells["cart_itemAmount"].Value)));
+                        break;
+                    case "Drink":
+                        itemList.Add(new Drink(item.Cells["cart_itemName"].Value.ToString(), Convert.ToInt32(item.Cells["cart_itemPrice"].Value), Convert.ToInt32(item.Cells["cart_itemAmount"].Value)));
+                        break;
+                }
+
             }
             Bill_Interface bill = new Bill_Interface(itemList);
             bill.Show();
         }
+
         //test hàm
 
 
