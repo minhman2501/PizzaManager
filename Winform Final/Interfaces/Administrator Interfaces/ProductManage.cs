@@ -1,6 +1,12 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 using Winform_Final.Business_Layers;
 
@@ -13,9 +19,11 @@ namespace Winform_Final.Administrator_Interfaces
 
         BSProduct productDatbase = new BSProduct();
         DataSet dataset;
+
         public ProductManage()
         {
             InitializeComponent();
+            
         }
         private void LoadData()
         {
@@ -24,7 +32,8 @@ namespace Winform_Final.Administrator_Interfaces
                 dtProduct = new DataTable();
                 dtProduct.Clear();
 
-                dataset = productDatbase.getProductsFullDetail();
+                dataset = productDatbase.getProductFullDetail();
+                
 
                 dtProduct = dataset.Tables[0];
 
@@ -41,6 +50,11 @@ namespace Winform_Final.Administrator_Interfaces
         private void addBtn_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+            
         }
 
         private void ProductManage_Load(object sender, EventArgs e)

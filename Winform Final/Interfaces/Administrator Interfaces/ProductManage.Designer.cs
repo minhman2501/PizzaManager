@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.wrapperPanel = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -52,10 +53,12 @@
             this.iconButton3 = new FontAwesome.Sharp.IconButton();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
+            this.dBMainBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.wrapperPanel.SuspendLayout();
             this.productListPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.productGridView)).BeginInit();
             this.addProductPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dBMainBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // wrapperPanel
@@ -236,12 +239,15 @@
             // 
             // productGridView
             // 
+            this.productGridView.AllowUserToAddRows = false;
+            this.productGridView.AllowUserToDeleteRows = false;
             this.productGridView.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.productGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.productGridView.Location = new System.Drawing.Point(3, 63);
             this.productGridView.Name = "productGridView";
+            this.productGridView.ReadOnly = true;
             this.productGridView.RowHeadersWidth = 51;
             this.productGridView.RowTemplate.Height = 24;
             this.productGridView.Size = new System.Drawing.Size(517, 310);
@@ -285,9 +291,6 @@
             this.comboBox1.BackColor = System.Drawing.Color.White;
             this.comboBox1.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "Pizza",
-            "Drinks"});
             this.comboBox1.Location = new System.Drawing.Point(29, 187);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(345, 29);
@@ -409,6 +412,10 @@
             this.label6.TabIndex = 1;
             this.label6.Text = "Add/Edit Product";
             // 
+            // dBMainBindingSource
+            // 
+            this.dBMainBindingSource.DataSource = typeof(Winform_Final.DBLayers.DBMain);
+            // 
             // ProductManage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -429,6 +436,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.productGridView)).EndInit();
             this.addProductPanel.ResumeLayout(false);
             this.addProductPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dBMainBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -459,5 +467,6 @@
         private FontAwesome.Sharp.IconButton iconButton4;
         private FontAwesome.Sharp.IconButton iconButton3;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.BindingSource dBMainBindingSource;
     }
 }

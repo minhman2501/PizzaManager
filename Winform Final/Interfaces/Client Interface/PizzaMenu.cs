@@ -1,10 +1,17 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections;
+using System.ComponentModel;
 using System.Data;
-using System.Data.SqlClient;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using System.Windows.Forms;
-using Winform_Final.Business_Layers;
 using Winform_Final.Class_Folder.Class_Object;
+
+using System.Data.SqlClient;
+using Winform_Final.Business_Layers;
 using Winform_Final.Interfaces.Global;
 
 namespace Winform_Final.Client_Interface
@@ -31,10 +38,10 @@ namespace Winform_Final.Client_Interface
                 dtProduct.Clear();
 
                 dataset = productDatbase.getProducts();
-                productFull = productDatbase.getProductsFullDetail();
+                productFull = productDatbase.getProductFullDetail();
 
                 dtProduct = dataset.Tables[0];
-
+                
                 foodGridView.DataSource = dtProduct;
                 foodGridView.AutoResizeColumns();
 
@@ -48,12 +55,6 @@ namespace Winform_Final.Client_Interface
         {
             LoadData();
         }
-
-        private void testBtn_Click(object sender, EventArgs e)
-        {
-            LoadData();
-        }
-
         private void foodGridView_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
 
@@ -72,8 +73,8 @@ namespace Winform_Final.Client_Interface
             {
                 foodGridView.Rows[selectedIndex].Cells[0].Value = true;
             }
-            else
-            {
+            else 
+            { 
                 foodGridView.Rows[selectedIndex].Cells[0].Value = false;
             }
         }
@@ -89,6 +90,7 @@ namespace Winform_Final.Client_Interface
                 }
                 if ((bool)item.Cells[0].Value == true)
                 {
+                    
                     foreach (DataGridViewRow cart_item in cartGridView.Rows)
                     {
                         amount = Convert.ToInt32(cart_item.Cells["cart_itemAmount"].Value);
@@ -98,11 +100,12 @@ namespace Winform_Final.Client_Interface
                             cart_item.Cells["cart_itemAmount"].Value = amount.ToString();
                             break;
                         }
-                        else
+                        else 
                         {
                             amount = 1;
                             continue;
                         }
+                        
                     }
                     if (amount == 1)
                     {
@@ -113,6 +116,7 @@ namespace Winform_Final.Client_Interface
                         cartGridView.Rows[n].Cells["cart_itemAmount"].Value = amount.ToString();
                     }
                 }
+
             }
         }
         private void PizzaListBtn_Click(object sender, EventArgs e)
@@ -130,18 +134,21 @@ namespace Winform_Final.Client_Interface
             foodGridView.DataSource = dtProduct;
             foodGridView.AutoResizeColumns();
         }
+
         private void deleteBtn_Click(object sender, EventArgs e)
         {
             cartGridView.Rows.RemoveAt(cartGridView.CurrentCell.RowIndex);
         }
+
         private void cancelBtn_Click(object sender, EventArgs e)
         {
             cartGridView.Rows.Clear();
         }
+
         private void confirmBtn_Click(object sender, EventArgs e)
         {
             List<Product> itemList = new List<Product>();
-            foreach (DataGridViewRow item in cartGridView.Rows)
+            foreach(DataGridViewRow item in cartGridView.Rows)
             {
                 itemList.Add(new Product(item.Cells["cart_itemName"].Value.ToString(), Convert.ToInt32(item.Cells["cart_itemPrice"].Value), Convert.ToInt32(item.Cells["cart_itemAmount"].Value)));
             }
