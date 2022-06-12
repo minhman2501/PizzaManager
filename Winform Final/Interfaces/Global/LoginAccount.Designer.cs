@@ -168,7 +168,7 @@
             // clientCheckBox
             // 
             this.clientCheckBox.AutoSize = true;
-            this.clientCheckBox.Location = new System.Drawing.Point(150, 375);
+            this.clientCheckBox.Location = new System.Drawing.Point(172, 375);
             this.clientCheckBox.Name = "clientCheckBox";
             this.clientCheckBox.Size = new System.Drawing.Size(62, 20);
             this.clientCheckBox.TabIndex = 4;
@@ -178,7 +178,7 @@
             // adminCheckBox
             // 
             this.adminCheckBox.AutoSize = true;
-            this.adminCheckBox.Location = new System.Drawing.Point(228, 375);
+            this.adminCheckBox.Location = new System.Drawing.Point(254, 374);
             this.adminCheckBox.Name = "adminCheckBox";
             this.adminCheckBox.Size = new System.Drawing.Size(107, 20);
             this.adminCheckBox.TabIndex = 4;
