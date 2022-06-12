@@ -20,11 +20,11 @@ namespace Winform_Final.Business_Layers
         }
         public DataSet getProducts()
         {
-            return db.ExecuteQueryDataSet("select ID, ProductName, price from PRODUCT", CommandType.Text);
+            return db.ExecuteQueryDataSet("select * from PRODUCT", CommandType.Text);
         }
         public DataSet getProduct_baseOnCategory(string category)
         {
-            return db.ExecuteQueryDataSet("select ID, ProductName, price from PRODUCT where Category='"+category+"'", CommandType.Text);
+            return db.ExecuteQueryDataSet("select * from PRODUCT where Category='"+category+"'", CommandType.Text);
         }
         
         public int countProducts(ref string err)

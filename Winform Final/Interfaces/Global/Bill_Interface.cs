@@ -34,6 +34,7 @@ namespace Winform_Final.Interfaces.Global
             foreach (Product item in productList)
             {
                 int n = bill_itemGridView.Rows.Add();
+                bill_itemGridView.Rows[n].Cells["quantity"].Value = n+1;
                 bill_itemGridView.Rows[n].Cells["description"].Value = item.printContent();
                 bill_itemGridView.Rows[n].Cells["unitPrice"].Value = item.getPrice().ToString();
                 bill_itemGridView.Rows[n].Cells["amountPrice"].Value = item.calculate().ToString();

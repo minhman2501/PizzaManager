@@ -37,6 +37,9 @@
             this.passwordTxt = new System.Windows.Forms.TextBox();
             this.loginBtn = new System.Windows.Forms.Button();
             this.cancleBtn = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
+            this.clientCheckBox = new System.Windows.Forms.CheckBox();
+            this.adminCheckBox = new System.Windows.Forms.CheckBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -58,7 +61,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 14F);
-            this.label2.Location = new System.Drawing.Point(27, 149);
+            this.label2.Location = new System.Drawing.Point(27, 105);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(140, 30);
             this.label2.TabIndex = 0;
@@ -68,7 +71,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 14F);
-            this.label3.Location = new System.Drawing.Point(27, 280);
+            this.label3.Location = new System.Drawing.Point(27, 233);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(129, 30);
             this.label3.TabIndex = 0;
@@ -80,7 +83,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.Controls.Add(this.usernameTxt);
-            this.panel1.Location = new System.Drawing.Point(32, 182);
+            this.panel1.Location = new System.Drawing.Point(32, 138);
             this.panel1.Name = "panel1";
             this.panel1.Padding = new System.Windows.Forms.Padding(10, 5, 10, 5);
             this.panel1.Size = new System.Drawing.Size(476, 74);
@@ -104,7 +107,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel2.BackColor = System.Drawing.Color.White;
             this.panel2.Controls.Add(this.passwordTxt);
-            this.panel2.Location = new System.Drawing.Point(32, 313);
+            this.panel2.Location = new System.Drawing.Point(32, 266);
             this.panel2.Name = "panel2";
             this.panel2.Padding = new System.Windows.Forms.Padding(10, 5, 10, 5);
             this.panel2.Size = new System.Drawing.Size(476, 74);
@@ -152,16 +155,49 @@
             this.cancleBtn.Text = "Cancel";
             this.cancleBtn.UseVisualStyleBackColor = false;
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Century Gothic", 14F);
+            this.label4.Location = new System.Drawing.Point(27, 365);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(117, 30);
+            this.label4.TabIndex = 0;
+            this.label4.Text = "Login as:";
+            // 
+            // clientCheckBox
+            // 
+            this.clientCheckBox.AutoSize = true;
+            this.clientCheckBox.Location = new System.Drawing.Point(150, 375);
+            this.clientCheckBox.Name = "clientCheckBox";
+            this.clientCheckBox.Size = new System.Drawing.Size(62, 20);
+            this.clientCheckBox.TabIndex = 4;
+            this.clientCheckBox.Text = "Client";
+            this.clientCheckBox.UseVisualStyleBackColor = true;
+            // 
+            // adminCheckBox
+            // 
+            this.adminCheckBox.AutoSize = true;
+            this.adminCheckBox.Location = new System.Drawing.Point(228, 375);
+            this.adminCheckBox.Name = "adminCheckBox";
+            this.adminCheckBox.Size = new System.Drawing.Size(107, 20);
+            this.adminCheckBox.TabIndex = 4;
+            this.adminCheckBox.Text = "Administrator";
+            this.adminCheckBox.UseVisualStyleBackColor = true;
+            // 
             // LoginAccount
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(237)))), ((int)(((byte)(239)))));
             this.ClientSize = new System.Drawing.Size(520, 660);
+            this.Controls.Add(this.adminCheckBox);
+            this.Controls.Add(this.clientCheckBox);
             this.Controls.Add(this.cancleBtn);
             this.Controls.Add(this.loginBtn);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -189,5 +225,8 @@
         private System.Windows.Forms.TextBox passwordTxt;
         private System.Windows.Forms.Button loginBtn;
         private System.Windows.Forms.Button cancleBtn;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.CheckBox clientCheckBox;
+        private System.Windows.Forms.CheckBox adminCheckBox;
     }
 }
