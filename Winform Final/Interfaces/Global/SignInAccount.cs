@@ -17,7 +17,11 @@ namespace Winform_Final.Global
         bool isInvalid = false;
 
         string err = "khonggg";
+        string errorValidate;
+        string emptyText;
         BSUser userDatabase;
+
+        
 
         public SignInAccount()
         {
@@ -33,7 +37,7 @@ namespace Winform_Final.Global
 
         private void loginBtn_Click(object sender, EventArgs e)
         {
-            validateSignUp();
+            isInvalid = validateSignUp();
 
             if(isInvalid == false)
             {
@@ -43,54 +47,74 @@ namespace Winform_Final.Global
             }
             else
             {
-                MessageBox.Show(err);
+                MessageBox.Show(errorValidate);
             }
         }
 
         private void signUp_usernameTxt_Leave(object sender, EventArgs e)
         {
-            
+            if(isNullorSpace(signUp_fullNameTxt.Text))
+            {
+                emptyText = "username";
+            }
         }
 
         private void signUp_passwordTxt_Leave(object sender, EventArgs e)
         {
-            
+            if (isNullorSpace(signUp_fullNameTxt.Text))
+            {
+                emptyText = "password";
+            }
         }
 
         private void signUp_fullNameTxt_Leave(object sender, EventArgs e)
         {
-            
+            if (isNullorSpace(signUp_fullNameTxt.Text))
+            {
+                emptyText = "full name";
+            }
         }
-        private void validateSignUp()
+        private bool validateSignUp()
         {
-            isInvalid = false;
-            //check if username have spacebetween
-            string username = signUp_usernameTxt.Text.ToString();
-            username.Trim();
-            if (username.Contains(" "))
+            bool isDone = false;
+            bool hasError = false;
+            List<string> textboxes = new List<string>() { signUp_fullNameTxt.Text, signUp_passwordTxt.Text, signUp_usernameTxt.Text };
+            while (hasError == false && isDone == false)
             {
-                err = "có khoảng trắng";
-                isInvalid = true;
+                //check for empty textboxes
+                foreach (string textbox in textboxes)
+                {
+                    if(isNullorSpace(textbox))
+                    {
+                        errorValidate = $"Empty {emptyText}";
+                        hasError = true;
+                    }
+                }
+                //check if username have spacebetween
+                string username = signUp_usernameTxt.Text.ToString();
+                username.Trim();
+                if (username.Contains(" "))
+                {
+                    errorValidate = "có khoảng trắng";
+                    hasError = true;
+                }
 
+                //check if username has already exist in the database
+                userDatabase = new BSUser();
+                Int32 usernameCount = Convert.ToInt32(userDatabase.countUsers_username(ref err, username));
+                if (usernameCount > 0)
+                {
+                    errorValidate = "có tài khoản rồi";
+                    hasError = true;
+                }
+                if (!reenterTxt.Text.Equals(signUp_passwordTxt.Text))
+                {
+                    errorValidate = "mật khẩu nhập lại không khớp";
+                    hasError = true;
+                }
+                isDone = true;
             }
-
-            //check if username has already exist in the database
-            userDatabase = new BSUser();
-            Int32 usernameCount = Convert.ToInt32(userDatabase.countUsers_username(ref err, username));
-            if (usernameCount > 0) 
-            {
-                err = "có tài khoản rồi";
-                isInvalid = true; 
-            }
-            
-        
-
-            if (!reenterTxt.Text.Equals(signUp_passwordTxt.Text))
-            {
-                err = "mật khẩu nhập lại không khớp";
-                isInvalid = true;
-            }
-            
+            return hasError;
         }
         private bool isNullorSpace(string original)
         {
@@ -102,5 +126,6 @@ namespace Winform_Final.Global
         {
             
         }
+
     }
 }
