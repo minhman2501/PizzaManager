@@ -10,27 +10,45 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Winform_Final.Class_Folder.Class_Object;
 
+using System.Data.SqlClient;
+using Winform_Final.Business_Layers;
+
 namespace Winform_Final.Interfaces.Global
 {
     public partial class Bill_Interface : Form
     {
+        Client buyingUser;
+        string billContent;
+        string orderingStatus;
+
+        
+        string err = "khongggg";
+        bool isValid = false;
         private List<Product> productList = new List<Product>();
+
+
+        BSBill billDatabase = new BSBill();
         public Bill_Interface()
         {
             InitializeComponent();
         }
 
-        public Bill_Interface(List<Product> products)
+        public Bill_Interface(List<Product> products, Client user)
         {
             InitializeComponent();
             productList = new List<Product>();
-            foreach(Product item in products)
+            foreach (Product item in products)
             {
                 productList.Add(item);
             }
+
+            this.buyingUser = user;
         }
         private void LoadBill()
         {
+            clientName.Text = buyingUser.getFullName();
+            clientAddressTxt.Text = buyingUser.getAddress();
+            billContent = "";
             foreach (Product item in productList)
             {
                 int n = bill_itemGridView.Rows.Add();
@@ -38,6 +56,7 @@ namespace Winform_Final.Interfaces.Global
                 bill_itemGridView.Rows[n].Cells["description"].Value = item.printContent();
                 bill_itemGridView.Rows[n].Cells["unitPrice"].Value = item.getPrice().ToString();
                 bill_itemGridView.Rows[n].Cells["amountPrice"].Value = item.calculate().ToString();
+                getBillContent(item.printContent());
             }
             this.total_priceLB.Text = calculateTotalInvoice().ToString();
         }
@@ -54,6 +73,36 @@ namespace Winform_Final.Interfaces.Global
         private void Bill_Interface_Load(object sender, EventArgs e)
         {
             LoadBill();
+        }
+        private void getBillContent(string itemContent)
+        {
+            this.billContent = this.billContent + $"{itemContent}" + "\t";
+        }
+
+        private void confirmBtn_Click(object sender, EventArgs e)
+        {
+            isValid = validate();
+            if (isValid)
+            {
+                billDatabase = new BSBill();
+                billDatabase.addingBill(buyingUser.getID().ToString(), total_priceLB.Text, billContent, clientAddressTxt.Text, invoiceDateDTP.Text, ref err);
+                orderingStatus = "Succesfully Odered! Have a nice meal";
+            }
+            MessageBox.Show(orderingStatus);
+        }
+        private bool validate()
+        {
+            if (String.IsNullOrEmpty(clientAddressTxt.Text) || total_priceLB.Text.Equals("0"))
+            {
+                orderingStatus = "Missing information for the ordering process";
+                return false;
+            }
+            return true;
+        }
+
+        private void cancelOrderBtn_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

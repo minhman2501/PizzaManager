@@ -26,11 +26,20 @@ namespace Winform_Final.Business_Layers
         {
             return db.ExecuteCount("SELECT COUNT(*) FROM ACCOUNT where username='" + username + "'", CommandType.Text, ref err);
         }
+        public int countUsers_login(ref string err, string username, string password)
+        {
+            return db.ExecuteCount("SELECT COUNT(*) FROM ACCOUNT where username='" + username + "' AND password='"+password+"'", CommandType.Text, ref err);
+        }
         public bool addingUser(string username, string password, string fullName, string address, ref string err)
         {
             string sqlString = "Insert Into ACCOUNT Values(" + "'" + username + "','" + password + "',N'" + fullName + "',N'" + address + "')";
             return db.MyExecuteNonQuery(sqlString, CommandType.Text, ref err);
         }
+        public DataSet getUser_withUsername(string username)
+        {
+            return db.ExecuteQueryDataSet("select * from ACCOUNT where username='"+username+"'", CommandType.Text);
+        }
+
 
     }
 }

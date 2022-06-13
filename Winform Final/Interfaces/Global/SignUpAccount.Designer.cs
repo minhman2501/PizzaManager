@@ -1,6 +1,6 @@
 ﻿namespace Winform_Final.Global
 {
-    partial class SignInAccount
+    partial class SignUpAccount
     {
         /// <summary>
         /// Required designer variable.
@@ -124,6 +124,7 @@
             this.cancelBtn.TabIndex = 9;
             this.cancelBtn.Text = "Cancel";
             this.cancelBtn.UseVisualStyleBackColor = false;
+            this.cancelBtn.Click += new System.EventHandler(this.cancelBtn_Click);
             // 
             // loginBtn
             // 
@@ -164,7 +165,6 @@
             this.reenterTxt.Name = "reenterTxt";
             this.reenterTxt.Size = new System.Drawing.Size(490, 27);
             this.reenterTxt.TabIndex = 0;
-            this.reenterTxt.Leave += new System.EventHandler(this.reenterTxt_Leave);
             // 
             // label4
             // 
@@ -268,8 +268,9 @@
             this.adressTxt.Name = "adressTxt";
             this.adressTxt.Size = new System.Drawing.Size(514, 154);
             this.adressTxt.TabIndex = 12;
+            this.adressTxt.Leave += new System.EventHandler(this.adressTxt_Leave);
             // 
-            // SignInAccount
+            // SignUpAccount
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -289,10 +290,11 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.cancelBtn);
             this.Controls.Add(this.loginBtn);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "SignInAccount";
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Name = "SignUpAccount";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "SignInAccount";
-            this.Load += new System.EventHandler(this.SignInAccount_Load);
+            this.Load += new System.EventHandler(this.SignUpAccount_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel3.ResumeLayout(false);

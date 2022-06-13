@@ -51,10 +51,10 @@
             this.label8 = new System.Windows.Forms.Label();
             this.cancelBtn = new FontAwesome.Sharp.IconButton();
             this.saveBtn = new FontAwesome.Sharp.IconButton();
+            this.idProductLB = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.idProductLB = new System.Windows.Forms.Label();
             this.dBMainBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.wrapperPanel.SuspendLayout();
             this.productListPanel.SuspendLayout();
@@ -104,13 +104,14 @@
             // label2
             // 
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Engravers MT", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(212, 88);
+            this.label2.Location = new System.Drawing.Point(200, 91);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(260, 83);
+            this.label2.Size = new System.Drawing.Size(286, 106);
             this.label2.TabIndex = 1;
-            this.label2.Text = "Total Product";
+            this.label2.Text = "TOTAL PRODUCT";
             // 
             // totalDrinkLabel
             // 
@@ -398,6 +399,31 @@
             this.saveBtn.UseVisualStyleBackColor = false;
             this.saveBtn.Click += new System.EventHandler(this.saveBtn_Click);
             // 
+            // idProductLB
+            // 
+            this.idProductLB.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.idProductLB.AutoSize = true;
+            this.idProductLB.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.idProductLB.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(4)))), ((int)(((byte)(94)))));
+            this.idProductLB.Location = new System.Drawing.Point(231, 63);
+            this.idProductLB.Name = "idProductLB";
+            this.idProductLB.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.idProductLB.Size = new System.Drawing.Size(0, 23);
+            this.idProductLB.TabIndex = 1;
+            // 
+            // label10
+            // 
+            this.label10.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(4)))), ((int)(((byte)(94)))));
+            this.label10.Location = new System.Drawing.Point(190, 63);
+            this.label10.Name = "label10";
+            this.label10.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.label10.Size = new System.Drawing.Size(35, 23);
+            this.label10.TabIndex = 1;
+            this.label10.Text = "ID:";
+            // 
             // label7
             // 
             this.label7.Anchor = System.Windows.Forms.AnchorStyles.Top;
@@ -424,39 +450,13 @@
             this.label6.TabIndex = 1;
             this.label6.Text = "Add/Edit Product";
             // 
-            // label10
-            // 
-            this.label10.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(4)))), ((int)(((byte)(94)))));
-            this.label10.Location = new System.Drawing.Point(190, 63);
-            this.label10.Name = "label10";
-            this.label10.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label10.Size = new System.Drawing.Size(35, 23);
-            this.label10.TabIndex = 1;
-            this.label10.Text = "ID:";
-            // 
-            // idProductLB
-            // 
-            this.idProductLB.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.idProductLB.AutoSize = true;
-            this.idProductLB.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.idProductLB.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(4)))), ((int)(((byte)(94)))));
-            this.idProductLB.Location = new System.Drawing.Point(231, 63);
-            this.idProductLB.Name = "idProductLB";
-            this.idProductLB.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.idProductLB.Size = new System.Drawing.Size(0, 23);
-            this.idProductLB.TabIndex = 1;
-            // 
             // dBMainBindingSource
             // 
             this.dBMainBindingSource.DataSource = typeof(Winform_Final.DBLayers.DBMain);
             // 
             // ProductManage
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(950, 672);
             this.Controls.Add(this.addProductPanel);

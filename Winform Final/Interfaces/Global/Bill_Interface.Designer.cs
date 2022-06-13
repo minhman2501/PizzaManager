@@ -46,6 +46,7 @@
             this.cancelOrderBtn = new FontAwesome.Sharp.IconButton();
             this.clientName = new System.Windows.Forms.Label();
             this.invoiceDateDTP = new System.Windows.Forms.DateTimePicker();
+            this.label6 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.bill_itemGridView)).BeginInit();
             this.SuspendLayout();
             // 
@@ -207,6 +208,7 @@
             this.confirmBtn.TabIndex = 5;
             this.confirmBtn.Text = "Confirm";
             this.confirmBtn.UseVisualStyleBackColor = false;
+            this.confirmBtn.Click += new System.EventHandler(this.confirmBtn_Click);
             // 
             // cancelOrderBtn
             // 
@@ -227,6 +229,7 @@
             this.cancelOrderBtn.TabIndex = 5;
             this.cancelOrderBtn.Text = "Cancel Order";
             this.cancelOrderBtn.UseVisualStyleBackColor = false;
+            this.cancelOrderBtn.Click += new System.EventHandler(this.cancelOrderBtn_Click);
             // 
             // clientName
             // 
@@ -241,12 +244,23 @@
             // invoiceDateDTP
             // 
             this.invoiceDateDTP.CalendarFont = new System.Drawing.Font("Verdana", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.invoiceDateDTP.CustomFormat = "dd / MM / yyyy";
+            this.invoiceDateDTP.CustomFormat = "yyyy / MM / dd";
+            this.invoiceDateDTP.Enabled = false;
             this.invoiceDateDTP.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.invoiceDateDTP.Location = new System.Drawing.Point(181, 190);
             this.invoiceDateDTP.Name = "invoiceDateDTP";
             this.invoiceDateDTP.Size = new System.Drawing.Size(156, 22);
             this.invoiceDateDTP.TabIndex = 6;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Oswald", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(652, 267);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(47, 35);
+            this.label6.TabIndex = 0;
+            this.label6.Text = "VND";
             // 
             // Bill_Interface
             // 
@@ -261,6 +275,7 @@
             this.Controls.Add(this.clientAddressTxt);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label5);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.total_priceLB);
             this.Controls.Add(this.clientName);
             this.Controls.Add(this.label4);
@@ -298,5 +313,6 @@
         private FontAwesome.Sharp.IconButton cancelOrderBtn;
         private System.Windows.Forms.Label clientName;
         private System.Windows.Forms.DateTimePicker invoiceDateDTP;
+        private System.Windows.Forms.Label label6;
     }
 }

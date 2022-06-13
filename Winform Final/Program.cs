@@ -7,6 +7,7 @@ using Winform_Final.Client_Interface;
 using Winform_Final.Administrator_Interfaces;
 using Winform_Final.Interfaces.Global;
 using Winform_Final.Global;
+using Winform_Final.Interfaces.Administrator_Interfaces;
 
 namespace Winform_Final
 {
@@ -20,7 +21,7 @@ namespace Winform_Final
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new MainAccountInterface());
+            Application.Run(new Statistic());
         }
     }
 }
