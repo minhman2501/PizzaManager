@@ -21,7 +21,11 @@ namespace Winform_Final.Class_Folder.Class_Object
         public Client(string username)
         {
             this.username = username;
-        }   
+        }
+        public int getID()
+        {
+            return this.id;
+        }
         public string getFullName()
         {
             return fullName;

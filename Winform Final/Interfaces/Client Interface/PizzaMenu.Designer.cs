@@ -32,6 +32,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label2 = new System.Windows.Forms.Label();
             this.PizzaListBtn = new System.Windows.Forms.Button();
             this.DrinkListBtn = new System.Windows.Forms.Button();
@@ -41,6 +42,8 @@
             this.select = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.addBtn = new FontAwesome.Sharp.IconButton();
             this.cartPanel = new System.Windows.Forms.Panel();
+            this.Welcome = new System.Windows.Forms.Label();
+            this.userFullNameTxt = new System.Windows.Forms.Label();
             this.deleteBtn = new FontAwesome.Sharp.IconButton();
             this.cancelBtn = new FontAwesome.Sharp.IconButton();
             this.confirmBtn = new FontAwesome.Sharp.IconButton();
@@ -50,8 +53,6 @@
             this.cart_itemCategory = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cart_itemAmount = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cart_itemPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.userFullNameTxt = new System.Windows.Forms.Label();
-            this.Welcome = new System.Windows.Forms.Label();
             this.menuPanel.SuspendLayout();
             this.foodListPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.foodGridView)).BeginInit();
@@ -132,7 +133,7 @@
             this.select});
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Ubuntu Mono", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
@@ -211,6 +212,26 @@
             this.cartPanel.Name = "cartPanel";
             this.cartPanel.Size = new System.Drawing.Size(564, 701);
             this.cartPanel.TabIndex = 3;
+            // 
+            // Welcome
+            // 
+            this.Welcome.AutoSize = true;
+            this.Welcome.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Welcome.Location = new System.Drawing.Point(221, 27);
+            this.Welcome.Name = "Welcome";
+            this.Welcome.Size = new System.Drawing.Size(89, 21);
+            this.Welcome.TabIndex = 6;
+            this.Welcome.Text = "Welcome";
+            // 
+            // userFullNameTxt
+            // 
+            this.userFullNameTxt.AutoSize = true;
+            this.userFullNameTxt.Font = new System.Drawing.Font("Century Gothic", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.userFullNameTxt.Location = new System.Drawing.Point(316, 13);
+            this.userFullNameTxt.Name = "userFullNameTxt";
+            this.userFullNameTxt.Size = new System.Drawing.Size(202, 40);
+            this.userFullNameTxt.TabIndex = 6;
+            this.userFullNameTxt.Text = "[username]";
             // 
             // deleteBtn
             // 
@@ -304,6 +325,14 @@
             this.cart_itemAmount,
             this.cart_itemPrice});
             this.cartGridView.Cursor = System.Windows.Forms.Cursors.Hand;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.cartGridView.DefaultCellStyle = dataGridViewCellStyle5;
             this.cartGridView.Location = new System.Drawing.Point(15, 72);
             this.cartGridView.Name = "cartGridView";
             this.cartGridView.RowHeadersWidth = 51;
@@ -342,26 +371,6 @@
             this.cart_itemPrice.Name = "cart_itemPrice";
             this.cart_itemPrice.ReadOnly = true;
             this.cart_itemPrice.Width = 125;
-            // 
-            // userFullNameTxt
-            // 
-            this.userFullNameTxt.AutoSize = true;
-            this.userFullNameTxt.Font = new System.Drawing.Font("Century Gothic", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.userFullNameTxt.Location = new System.Drawing.Point(316, 13);
-            this.userFullNameTxt.Name = "userFullNameTxt";
-            this.userFullNameTxt.Size = new System.Drawing.Size(202, 40);
-            this.userFullNameTxt.TabIndex = 6;
-            this.userFullNameTxt.Text = "[username]";
-            // 
-            // Welcome
-            // 
-            this.Welcome.AutoSize = true;
-            this.Welcome.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Welcome.Location = new System.Drawing.Point(221, 27);
-            this.Welcome.Name = "Welcome";
-            this.Welcome.Size = new System.Drawing.Size(89, 21);
-            this.Welcome.TabIndex = 6;
-            this.Welcome.Text = "Welcome";
             // 
             // PizzaMenu
             // 

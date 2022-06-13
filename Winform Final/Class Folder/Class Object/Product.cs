@@ -31,7 +31,7 @@ namespace Winform_Final.Class_Folder.Class_Object
         }
         public string printContent()
         {
-            string content = $"{this.category}:\t {this.name}; \t Amount: x{this.amount}";
+            string content = $"{this.category}: {this.name}; Amount: x{this.amount}";
             return content;
 
         }

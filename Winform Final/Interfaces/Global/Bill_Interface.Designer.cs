@@ -207,6 +207,7 @@
             this.confirmBtn.TabIndex = 5;
             this.confirmBtn.Text = "Confirm";
             this.confirmBtn.UseVisualStyleBackColor = false;
+            this.confirmBtn.Click += new System.EventHandler(this.confirmBtn_Click);
             // 
             // cancelOrderBtn
             // 
@@ -227,6 +228,7 @@
             this.cancelOrderBtn.TabIndex = 5;
             this.cancelOrderBtn.Text = "Cancel Order";
             this.cancelOrderBtn.UseVisualStyleBackColor = false;
+            this.cancelOrderBtn.Click += new System.EventHandler(this.cancelOrderBtn_Click);
             // 
             // clientName
             // 
@@ -241,7 +243,8 @@
             // invoiceDateDTP
             // 
             this.invoiceDateDTP.CalendarFont = new System.Drawing.Font("Verdana", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.invoiceDateDTP.CustomFormat = "dd / MM / yyyy";
+            this.invoiceDateDTP.CustomFormat = "yyyy / MM / dd";
+            this.invoiceDateDTP.Enabled = false;
             this.invoiceDateDTP.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.invoiceDateDTP.Location = new System.Drawing.Point(181, 190);
             this.invoiceDateDTP.Name = "invoiceDateDTP";

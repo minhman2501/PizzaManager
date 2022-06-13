@@ -95,5 +95,10 @@ namespace Winform_Final.Global
             SignUpAccount signUp = new SignUpAccount();
             signUp.Show();
         }
+
+        private void cancleBtn_Click(object sender, EventArgs e)
+        {
+            resetAll();
+        }
     }
 }
