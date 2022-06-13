@@ -20,5 +20,12 @@ namespace Winform_Final.Administrator_Interfaces
             this.contentPanel.Controls.Add(productInterface);
             productInterface.Show();
         }
+
+        private void iconButton1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            FormCollection forms = Application.OpenForms;
+            forms[0].Show();
+        }
     }
 }

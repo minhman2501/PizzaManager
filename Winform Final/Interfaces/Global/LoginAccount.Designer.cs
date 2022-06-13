@@ -40,6 +40,8 @@
             this.label4 = new System.Windows.Forms.Label();
             this.clientRadioBtn = new System.Windows.Forms.RadioButton();
             this.administratorRadioBtn = new System.Windows.Forms.RadioButton();
+            this.changeBtn = new System.Windows.Forms.Button();
+            this.askingLB = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -133,7 +135,7 @@
             this.loginBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.loginBtn.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.loginBtn.ForeColor = System.Drawing.Color.White;
-            this.loginBtn.Location = new System.Drawing.Point(384, 578);
+            this.loginBtn.Location = new System.Drawing.Point(384, 454);
             this.loginBtn.Name = "loginBtn";
             this.loginBtn.Size = new System.Drawing.Size(124, 44);
             this.loginBtn.TabIndex = 3;
@@ -149,7 +151,7 @@
             this.cancleBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cancleBtn.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cancleBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(46)))), ((int)(((byte)(69)))));
-            this.cancleBtn.Location = new System.Drawing.Point(254, 578);
+            this.cancleBtn.Location = new System.Drawing.Point(254, 454);
             this.cancleBtn.Name = "cancleBtn";
             this.cancleBtn.Size = new System.Drawing.Size(124, 44);
             this.cancleBtn.TabIndex = 3;
@@ -188,12 +190,40 @@
             this.administratorRadioBtn.Text = "Administrator";
             this.administratorRadioBtn.UseVisualStyleBackColor = true;
             // 
+            // changeBtn
+            // 
+            this.changeBtn.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.changeBtn.BackColor = System.Drawing.SystemColors.Control;
+            this.changeBtn.FlatAppearance.BorderSize = 0;
+            this.changeBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.changeBtn.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.changeBtn.Location = new System.Drawing.Point(294, 575);
+            this.changeBtn.Name = "changeBtn";
+            this.changeBtn.Size = new System.Drawing.Size(214, 45);
+            this.changeBtn.TabIndex = 6;
+            this.changeBtn.Text = "Sign Up Now!";
+            this.changeBtn.UseVisualStyleBackColor = false;
+            this.changeBtn.Click += new System.EventHandler(this.changeBtn_Click);
+            // 
+            // askingLB
+            // 
+            this.askingLB.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.askingLB.AutoSize = true;
+            this.askingLB.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.askingLB.Location = new System.Drawing.Point(24, 588);
+            this.askingLB.Name = "askingLB";
+            this.askingLB.Size = new System.Drawing.Size(137, 21);
+            this.askingLB.TabIndex = 5;
+            this.askingLB.Text = "New member ?";
+            // 
             // LoginAccount
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(237)))), ((int)(((byte)(239)))));
             this.ClientSize = new System.Drawing.Size(520, 660);
+            this.Controls.Add(this.changeBtn);
+            this.Controls.Add(this.askingLB);
             this.Controls.Add(this.administratorRadioBtn);
             this.Controls.Add(this.clientRadioBtn);
             this.Controls.Add(this.cancleBtn);
@@ -204,8 +234,9 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "LoginAccount";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "LoginAccount";
             this.Load += new System.EventHandler(this.LoginAccount_Load);
             this.panel1.ResumeLayout(false);
@@ -231,5 +262,7 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.RadioButton clientRadioBtn;
         private System.Windows.Forms.RadioButton administratorRadioBtn;
+        private System.Windows.Forms.Button changeBtn;
+        private System.Windows.Forms.Label askingLB;
     }
 }

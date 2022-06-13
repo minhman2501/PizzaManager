@@ -18,6 +18,7 @@ namespace Winform_Final.Client_Interface
 {
     public partial class PizzaMenu : Form
     {
+        Client user;
         DataTable dtProduct = null;
         string err;
 
@@ -28,6 +29,11 @@ namespace Winform_Final.Client_Interface
         public PizzaMenu()
         {
             InitializeComponent();
+        }
+        public PizzaMenu(string username)
+        {
+            InitializeComponent();
+            user = new Client(username);
         }
 
         private void LoadData()
@@ -44,7 +50,8 @@ namespace Winform_Final.Client_Interface
                 
                 foodGridView.DataSource = dtProduct;
                 foodGridView.AutoResizeColumns();
-
+                this.user.getClientDetails();
+                userFullNameTxt.Text = user.getFullName();
             }
             catch (SqlException)
             {
@@ -64,7 +71,6 @@ namespace Winform_Final.Client_Interface
         {
 
         }
-
         private void foodGridView_MouseClick(object sender, MouseEventArgs e)
         {
             int selectedIndex = foodGridView.CurrentCell.RowIndex;
@@ -78,7 +84,6 @@ namespace Winform_Final.Client_Interface
                 foodGridView.Rows[selectedIndex].Cells[0].Value = false;
             }
         }
-
         private void addBtn_Click(object sender, EventArgs e)
         {
             int amount = 1;
@@ -142,7 +147,6 @@ namespace Winform_Final.Client_Interface
         {
             cartGridView.Rows.Clear();
         }
-
         private void confirmBtn_Click(object sender, EventArgs e)
         {
             string type;
@@ -159,15 +163,9 @@ namespace Winform_Final.Client_Interface
                         itemList.Add(new Drink(item.Cells["cart_itemName"].Value.ToString(), Convert.ToInt32(item.Cells["cart_itemPrice"].Value), Convert.ToInt32(item.Cells["cart_itemAmount"].Value)));
                         break;
                 }
-
             }
-            Bill_Interface bill = new Bill_Interface(itemList);
+            Bill_Interface bill = new Bill_Interface(itemList, this.user);
             bill.Show();
         }
-
-        //test hàm
-
-
-
     }
 }

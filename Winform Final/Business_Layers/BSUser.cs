@@ -35,6 +35,11 @@ namespace Winform_Final.Business_Layers
             string sqlString = "Insert Into ACCOUNT Values(" + "'" + username + "','" + password + "',N'" + fullName + "',N'" + address + "')";
             return db.MyExecuteNonQuery(sqlString, CommandType.Text, ref err);
         }
+        public DataSet getUser_withUsername(string username)
+        {
+            return db.ExecuteQueryDataSet("select * from ACCOUNT where username='"+username+"'", CommandType.Text);
+        }
+
 
     }
 }

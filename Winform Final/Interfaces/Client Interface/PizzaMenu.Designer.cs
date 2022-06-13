@@ -28,7 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label2 = new System.Windows.Forms.Label();
             this.PizzaListBtn = new System.Windows.Forms.Button();
             this.DrinkListBtn = new System.Windows.Forms.Button();
@@ -47,6 +50,8 @@
             this.cart_itemCategory = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cart_itemAmount = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cart_itemPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.userFullNameTxt = new System.Windows.Forms.Label();
+            this.Welcome = new System.Windows.Forms.Label();
             this.menuPanel.SuspendLayout();
             this.foodListPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.foodGridView)).BeginInit();
@@ -125,10 +130,30 @@
             this.foodGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.foodGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.select});
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Ubuntu Mono", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.foodGridView.DefaultCellStyle = dataGridViewCellStyle1;
+            this.foodGridView.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
+            this.foodGridView.GridColor = System.Drawing.Color.Silver;
             this.foodGridView.Location = new System.Drawing.Point(3, 3);
             this.foodGridView.Name = "foodGridView";
             this.foodGridView.ReadOnly = true;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.foodGridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.foodGridView.RowHeadersWidth = 51;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            this.foodGridView.RowsDefaultCellStyle = dataGridViewCellStyle3;
             this.foodGridView.RowTemplate.Height = 24;
             this.foodGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.foodGridView.Size = new System.Drawing.Size(632, 410);
@@ -175,6 +200,8 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.cartPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(254)))), ((int)(((byte)(235)))));
+            this.cartPanel.Controls.Add(this.Welcome);
+            this.cartPanel.Controls.Add(this.userFullNameTxt);
             this.cartPanel.Controls.Add(this.deleteBtn);
             this.cartPanel.Controls.Add(this.cancelBtn);
             this.cartPanel.Controls.Add(this.confirmBtn);
@@ -264,8 +291,8 @@
             // 
             this.cartGridView.AllowUserToAddRows = false;
             this.cartGridView.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle3.Padding = new System.Windows.Forms.Padding(0, 10, 0, 0);
-            this.cartGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle4.Padding = new System.Windows.Forms.Padding(0, 10, 0, 0);
+            this.cartGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
             this.cartGridView.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -316,10 +343,29 @@
             this.cart_itemPrice.ReadOnly = true;
             this.cart_itemPrice.Width = 125;
             // 
+            // userFullNameTxt
+            // 
+            this.userFullNameTxt.AutoSize = true;
+            this.userFullNameTxt.Font = new System.Drawing.Font("Century Gothic", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.userFullNameTxt.Location = new System.Drawing.Point(316, 13);
+            this.userFullNameTxt.Name = "userFullNameTxt";
+            this.userFullNameTxt.Size = new System.Drawing.Size(202, 40);
+            this.userFullNameTxt.TabIndex = 6;
+            this.userFullNameTxt.Text = "[username]";
+            // 
+            // Welcome
+            // 
+            this.Welcome.AutoSize = true;
+            this.Welcome.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Welcome.Location = new System.Drawing.Point(221, 27);
+            this.Welcome.Name = "Welcome";
+            this.Welcome.Size = new System.Drawing.Size(89, 21);
+            this.Welcome.TabIndex = 6;
+            this.Welcome.Text = "Welcome";
+            // 
             // PizzaMenu
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1232, 725);
             this.Controls.Add(this.menuPanel);
@@ -357,5 +403,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn cart_itemCategory;
         private System.Windows.Forms.DataGridViewTextBoxColumn cart_itemAmount;
         private System.Windows.Forms.DataGridViewTextBoxColumn cart_itemPrice;
+        private System.Windows.Forms.Label userFullNameTxt;
+        private System.Windows.Forms.Label Welcome;
     }
 }

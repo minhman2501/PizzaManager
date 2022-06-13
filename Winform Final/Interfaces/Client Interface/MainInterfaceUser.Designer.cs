@@ -47,7 +47,7 @@
             this.sideBarPanel.Dock = System.Windows.Forms.DockStyle.Left;
             this.sideBarPanel.Location = new System.Drawing.Point(0, 0);
             this.sideBarPanel.Name = "sideBarPanel";
-            this.sideBarPanel.Size = new System.Drawing.Size(225, 655);
+            this.sideBarPanel.Size = new System.Drawing.Size(306, 655);
             this.sideBarPanel.TabIndex = 0;
             // 
             // iconButton1
@@ -64,12 +64,13 @@
             this.iconButton1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.iconButton1.Location = new System.Drawing.Point(0, 580);
             this.iconButton1.Name = "iconButton1";
-            this.iconButton1.Size = new System.Drawing.Size(225, 75);
+            this.iconButton1.Size = new System.Drawing.Size(306, 75);
             this.iconButton1.TabIndex = 4;
             this.iconButton1.Text = "Log Out";
             this.iconButton1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.iconButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.iconButton1.UseVisualStyleBackColor = true;
+            this.iconButton1.Click += new System.EventHandler(this.iconButton1_Click);
             // 
             // buyHistoryBtn
             // 
@@ -83,10 +84,10 @@
             this.buyHistoryBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.buyHistoryBtn.IconSize = 40;
             this.buyHistoryBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buyHistoryBtn.Location = new System.Drawing.Point(0, 248);
+            this.buyHistoryBtn.Location = new System.Drawing.Point(0, 250);
             this.buyHistoryBtn.Name = "buyHistoryBtn";
             this.buyHistoryBtn.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
-            this.buyHistoryBtn.Size = new System.Drawing.Size(225, 93);
+            this.buyHistoryBtn.Size = new System.Drawing.Size(300, 93);
             this.buyHistoryBtn.TabIndex = 3;
             this.buyHistoryBtn.Text = "Order History";
             this.buyHistoryBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -104,7 +105,7 @@
             this.MenuBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.MenuBtn.IconSize = 40;
             this.MenuBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.MenuBtn.Location = new System.Drawing.Point(0, 167);
+            this.MenuBtn.Location = new System.Drawing.Point(3, 178);
             this.MenuBtn.Name = "MenuBtn";
             this.MenuBtn.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
             this.MenuBtn.Size = new System.Drawing.Size(225, 66);
@@ -126,7 +127,7 @@
             this.HomeBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.HomeBtn.IconSize = 40;
             this.HomeBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.HomeBtn.Location = new System.Drawing.Point(0, 84);
+            this.HomeBtn.Location = new System.Drawing.Point(3, 106);
             this.HomeBtn.Name = "HomeBtn";
             this.HomeBtn.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
             this.HomeBtn.Size = new System.Drawing.Size(225, 66);
@@ -140,9 +141,9 @@
             // 
             this.wrapperPanel.BackColor = System.Drawing.Color.Transparent;
             this.wrapperPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.wrapperPanel.Location = new System.Drawing.Point(225, 0);
+            this.wrapperPanel.Location = new System.Drawing.Point(306, 0);
             this.wrapperPanel.Name = "wrapperPanel";
-            this.wrapperPanel.Size = new System.Drawing.Size(1234, 655);
+            this.wrapperPanel.Size = new System.Drawing.Size(1153, 655);
             this.wrapperPanel.TabIndex = 1;
             // 
             // MainInterfaceUser

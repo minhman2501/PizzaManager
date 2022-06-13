@@ -13,39 +13,40 @@ namespace Winform_Final
 {
     public partial class MainInterfaceUser : Form
     {
-         
+        string username;
         HomeScreen userHome;
         PizzaMenu menu;
 
-        public MainInterfaceUser()
+        public MainInterfaceUser(string username)
         {
             InitializeComponent();
-            this.WindowState = FormWindowState.Maximized;
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Sizable;
-
-            userHome = new HomeScreen() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
-            menu = new PizzaMenu() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
-            this.wrapperPanel.Controls.Add(userHome);
-            this.wrapperPanel.Controls.Add(menu);
-            userHome.Show();
-
+            this.username = username;
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            
+            userHome = new HomeScreen() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
+            menu = new PizzaMenu(this.username) { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
+            this.wrapperPanel.Controls.Add(userHome);
+            this.wrapperPanel.Controls.Add(menu);
+            userHome.Show();
         }
-
         private void MenuBtn_Click(object sender, EventArgs e)
         {
-            userHome.Hide();   
+            userHome.Hide();
             menu.Show();
         }
-
         private void HomeBtn_Click(object sender, EventArgs e)
         {
             menu.Hide();
             userHome.Show();
+        }
+
+        private void iconButton1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            FormCollection forms = Application.OpenForms;
+            forms[0].Show();
         }
     }
 }

@@ -51,7 +51,7 @@ namespace Winform_Final.Global
                 }
                 finally
                 {
-                    SignUpAccount_Load(sender, e);
+                    this.Close();
                 }
 
             }
@@ -148,6 +148,11 @@ namespace Winform_Final.Global
         {
             resetAll();
             signUp_fullNameTxt.Focus();
+        }
+
+        private void cancelBtn_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

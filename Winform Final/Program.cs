@@ -20,7 +20,7 @@ namespace Winform_Final
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new MainAccountInterface());
+            Application.Run(new LoginAccount());
         }
     }
 }

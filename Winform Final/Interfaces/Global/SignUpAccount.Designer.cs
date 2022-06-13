@@ -124,6 +124,7 @@
             this.cancelBtn.TabIndex = 9;
             this.cancelBtn.Text = "Cancel";
             this.cancelBtn.UseVisualStyleBackColor = false;
+            this.cancelBtn.Click += new System.EventHandler(this.cancelBtn_Click);
             // 
             // loginBtn
             // 
@@ -289,8 +290,9 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.cancelBtn);
             this.Controls.Add(this.loginBtn);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "SignUpAccount";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "SignInAccount";
             this.Load += new System.EventHandler(this.SignUpAccount_Load);
             this.panel1.ResumeLayout(false);

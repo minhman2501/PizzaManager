@@ -14,23 +14,28 @@ namespace Winform_Final.Interfaces.Global
 {
     public partial class Bill_Interface : Form
     {
+        Client buyingUser;
         private List<Product> productList = new List<Product>();
         public Bill_Interface()
         {
             InitializeComponent();
         }
 
-        public Bill_Interface(List<Product> products)
+        public Bill_Interface(List<Product> products, Client user)
         {
             InitializeComponent();
             productList = new List<Product>();
-            foreach(Product item in products)
+            foreach (Product item in products)
             {
                 productList.Add(item);
             }
+
+            this.buyingUser = user;
         }
         private void LoadBill()
         {
+            clientName.Text = buyingUser.getFullName();
+            clientAddressTxt.Text = buyingUser.getAddress();
             foreach (Product item in productList)
             {
                 int n = bill_itemGridView.Rows.Add();
