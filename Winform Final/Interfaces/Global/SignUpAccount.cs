@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -12,7 +13,7 @@ using Winform_Final.Business_Layers;
 namespace Winform_Final.Global
 {
     
-    public partial class SignInAccount : Form
+    public partial class SignUpAccount : Form
     {
         bool isInvalid = false;
 
@@ -23,15 +24,12 @@ namespace Winform_Final.Global
 
         
 
-        public SignInAccount()
+        public SignUpAccount()
         {
             InitializeComponent();
         }
 
-        private void SignInAccount_Load(object sender, EventArgs e)
-        {
-            
-        }
+        
 
         
 
@@ -41,16 +39,35 @@ namespace Winform_Final.Global
 
             if(isInvalid == false)
             {
-                userDatabase = new BSUser();
-                userDatabase.addingUser(signUp_usernameTxt.Text, signUp_passwordTxt.Text, signUp_fullNameTxt.Text, adressTxt.Text, ref err);
-                MessageBox.Show("Sucessfully Registerd");
+                try
+                {
+                    userDatabase = new BSUser();
+                    userDatabase.addingUser(signUp_usernameTxt.Text, signUp_passwordTxt.Text, signUp_fullNameTxt.Text, adressTxt.Text, ref err);
+                    MessageBox.Show("Sucessfully Registerd");
+                }
+                catch (SqlException)
+                {
+                    MessageBox.Show("Unable to create this account");
+                }
+                finally
+                {
+                    SignUpAccount_Load(sender, e);
+                }
+
             }
             else
             {
                 MessageBox.Show(errorValidate);
             }
         }
-
+        private void resetAll()
+        {
+            List<TextBox> textboxes = new List<TextBox>() { signUp_fullNameTxt, adressTxt, signUp_usernameTxt, signUp_passwordTxt, reenterTxt };
+            foreach (TextBox textbox in textboxes)
+            {
+                textbox.ResetText();
+            }
+        }
         private void signUp_usernameTxt_Leave(object sender, EventArgs e)
         {
             if(isNullorSpace(signUp_fullNameTxt.Text))
@@ -78,13 +95,13 @@ namespace Winform_Final.Global
         {
             bool isDone = false;
             bool hasError = false;
-            List<string> textboxes = new List<string>() { signUp_fullNameTxt.Text, signUp_passwordTxt.Text, signUp_usernameTxt.Text };
+            List<TextBox> textboxes = new List<TextBox>() { signUp_fullNameTxt, adressTxt, signUp_usernameTxt, signUp_passwordTxt, reenterTxt };
             while (hasError == false && isDone == false)
             {
                 //check for empty textboxes
-                foreach (string textbox in textboxes)
+                foreach (TextBox textbox in textboxes)
                 {
-                    if(isNullorSpace(textbox))
+                    if(isNullorSpace(textbox.Text))
                     {
                         errorValidate = $"Empty {emptyText}";
                         hasError = true;
@@ -122,10 +139,15 @@ namespace Winform_Final.Global
             return false;
         }
 
-        private void reenterTxt_Leave(object sender, EventArgs e)
+        private void adressTxt_Leave(object sender, EventArgs e)
         {
-            
+            emptyText = "address";
         }
 
+        private void SignUpAccount_Load(object sender, EventArgs e)
+        {
+            resetAll();
+            signUp_fullNameTxt.Focus();
+        }
     }
 }

@@ -8,18 +8,21 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+using Winform_Final.Administrator_Interfaces;
+using Winform_Final.Client_Interface;
+
 namespace Winform_Final.Global
 {
     public partial class MainAccountInterface : Form
     {
         LoginAccount loginInterface;
-        SignInAccount signInInterface;
+        SignUpAccount signInInterface;
         bool isLogging = true;
         public MainAccountInterface()
         {
             InitializeComponent();
             loginInterface = new LoginAccount() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
-            signInInterface = new SignInAccount() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
+            signInInterface = new SignUpAccount() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
             this.contentPanel.Controls.Add(loginInterface);
             loginInterface.Show();
             changeButtonContent(isLogging);
@@ -71,8 +74,7 @@ namespace Winform_Final.Global
                     isLogging = true;
                     changeButtonContent(isLogging);
                     loginInterface.Show();
-                    break;;
-                
+                    break;
             }
             
         }

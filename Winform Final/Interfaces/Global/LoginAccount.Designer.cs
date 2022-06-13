@@ -38,8 +38,8 @@
             this.loginBtn = new System.Windows.Forms.Button();
             this.cancleBtn = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
+            this.clientRadioBtn = new System.Windows.Forms.RadioButton();
+            this.administratorRadioBtn = new System.Windows.Forms.RadioButton();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -139,6 +139,7 @@
             this.loginBtn.TabIndex = 3;
             this.loginBtn.Text = "Sign In";
             this.loginBtn.UseVisualStyleBackColor = false;
+            this.loginBtn.Click += new System.EventHandler(this.loginBtn_Click);
             // 
             // cancleBtn
             // 
@@ -165,27 +166,27 @@
             this.label4.TabIndex = 0;
             this.label4.Text = "Login as:";
             // 
-            // radioButton1
+            // clientRadioBtn
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(150, 373);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(61, 20);
-            this.radioButton1.TabIndex = 4;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Client";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.clientRadioBtn.AutoSize = true;
+            this.clientRadioBtn.Location = new System.Drawing.Point(150, 373);
+            this.clientRadioBtn.Name = "clientRadioBtn";
+            this.clientRadioBtn.Size = new System.Drawing.Size(61, 20);
+            this.clientRadioBtn.TabIndex = 4;
+            this.clientRadioBtn.TabStop = true;
+            this.clientRadioBtn.Text = "Client";
+            this.clientRadioBtn.UseVisualStyleBackColor = true;
             // 
-            // radioButton2
+            // administratorRadioBtn
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(244, 373);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(106, 20);
-            this.radioButton2.TabIndex = 4;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Administrator";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.administratorRadioBtn.AutoSize = true;
+            this.administratorRadioBtn.Location = new System.Drawing.Point(244, 373);
+            this.administratorRadioBtn.Name = "administratorRadioBtn";
+            this.administratorRadioBtn.Size = new System.Drawing.Size(106, 20);
+            this.administratorRadioBtn.TabIndex = 4;
+            this.administratorRadioBtn.TabStop = true;
+            this.administratorRadioBtn.Text = "Administrator";
+            this.administratorRadioBtn.UseVisualStyleBackColor = true;
             // 
             // LoginAccount
             // 
@@ -193,8 +194,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(237)))), ((int)(((byte)(239)))));
             this.ClientSize = new System.Drawing.Size(520, 660);
-            this.Controls.Add(this.radioButton2);
-            this.Controls.Add(this.radioButton1);
+            this.Controls.Add(this.administratorRadioBtn);
+            this.Controls.Add(this.clientRadioBtn);
             this.Controls.Add(this.cancleBtn);
             this.Controls.Add(this.loginBtn);
             this.Controls.Add(this.panel2);
@@ -228,7 +229,7 @@
         private System.Windows.Forms.Button loginBtn;
         private System.Windows.Forms.Button cancleBtn;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.RadioButton radioButton1;
-        private System.Windows.Forms.RadioButton radioButton2;
+        private System.Windows.Forms.RadioButton clientRadioBtn;
+        private System.Windows.Forms.RadioButton administratorRadioBtn;
     }
 }

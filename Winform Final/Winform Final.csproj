@@ -107,11 +107,11 @@
     <Compile Include="Interfaces\Global\MainAccountInterface.Designer.cs">
       <DependentUpon>MainAccountInterface.cs</DependentUpon>
     </Compile>
-    <Compile Include="Interfaces\Global\SignInAccount.cs">
+    <Compile Include="Interfaces\Global\SignUpAccount.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Interfaces\Global\SignInAccount.Designer.cs">
-      <DependentUpon>SignInAccount.cs</DependentUpon>
+    <Compile Include="Interfaces\Global\SignUpAccount.Designer.cs">
+      <DependentUpon>SignUpAccount.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -139,8 +139,8 @@
     <EmbeddedResource Include="Interfaces\Global\MainAccountInterface.resx">
       <DependentUpon>MainAccountInterface.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Interfaces\Global\SignInAccount.resx">
-      <DependentUpon>SignInAccount.cs</DependentUpon>
+    <EmbeddedResource Include="Interfaces\Global\SignUpAccount.resx">
+      <DependentUpon>SignUpAccount.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
