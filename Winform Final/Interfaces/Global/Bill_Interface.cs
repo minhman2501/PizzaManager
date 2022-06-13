@@ -19,7 +19,9 @@ namespace Winform_Final.Interfaces.Global
     {
         Client buyingUser;
         string billContent;
-        string billTotalInvoice;
+        string orderingStatus;
+
+        
         string err = "khongggg";
         bool isValid = false;
         private List<Product> productList = new List<Product>();
@@ -84,12 +86,15 @@ namespace Winform_Final.Interfaces.Global
             {
                 billDatabase = new BSBill();
                 billDatabase.addingBill(buyingUser.getID().ToString(), total_priceLB.Text, billContent, clientAddressTxt.Text, invoiceDateDTP.Text, ref err);
+                orderingStatus = "Succesfully Odered! Have a nice meal";
             }
+            MessageBox.Show(orderingStatus);
         }
         private bool validate()
         {
-            if (String.IsNullOrEmpty(clientAddressTxt.Text))
+            if (String.IsNullOrEmpty(clientAddressTxt.Text) || total_priceLB.Text.Equals("0"))
             {
+                orderingStatus = "Missing information for the ordering process";
                 return false;
             }
             return true;

@@ -92,6 +92,7 @@
             this.buyHistoryBtn.Text = "Order History";
             this.buyHistoryBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.buyHistoryBtn.UseVisualStyleBackColor = true;
+            this.buyHistoryBtn.Click += new System.EventHandler(this.buyHistoryBtn_Click);
             // 
             // MenuBtn
             // 

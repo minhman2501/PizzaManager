@@ -24,7 +24,7 @@ namespace Winform_Final.Business_Layers
         }
         public DataSet getBills_baseOnCUser(int userId)
         {
-            return db.ExecuteQueryDataSet("select * from BILLDETAIL where userID='" + userId + "'", CommandType.Text);
+            return db.ExecuteQueryDataSet("select * from BILLDETAIL where clientID='" + userId + "'", CommandType.Text);
         }
         public bool addingBill(string userID, string totalPrice, string content, string address, string date, ref string err)
         {

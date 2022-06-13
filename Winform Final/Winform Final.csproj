@@ -57,7 +57,6 @@
     <Compile Include="Business_Layers\BSProduct.cs" />
     <Compile Include="Business_Layers\BSUser.cs" />
     <Compile Include="Class Folder\Class Object\Drink.cs" />
-    <Compile Include="Class Folder\Class Object\globalClass.cs" />
     <Compile Include="Class Folder\Class Object\Product.cs" />
     <Compile Include="Class Folder\Class Object\Client.cs" />
     <Compile Include="Interfaces\Administrator Interfaces\MainAdminInterfaces.cs">
@@ -73,6 +72,18 @@
       <DependentUpon>ProductManage.cs</DependentUpon>
     </Compile>
     <Compile Include="Class Folder\Class Object\Pizza.cs" />
+    <Compile Include="Interfaces\Administrator Interfaces\Statistic.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interfaces\Administrator Interfaces\Statistic.Designer.cs">
+      <DependentUpon>Statistic.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interfaces\Client Interface\Client_HistoryOrdering.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interfaces\Client Interface\Client_HistoryOrdering.Designer.cs">
+      <DependentUpon>Client_HistoryOrdering.cs</DependentUpon>
+    </Compile>
     <Compile Include="Interfaces\Client Interface\HomeScreen.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -117,6 +128,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Interfaces\Administrator Interfaces\ProductManage.resx">
       <DependentUpon>ProductManage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interfaces\Administrator Interfaces\Statistic.resx">
+      <DependentUpon>Statistic.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interfaces\Client Interface\Client_HistoryOrdering.resx">
+      <DependentUpon>Client_HistoryOrdering.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Interfaces\Client Interface\HomeScreen.resx">
       <DependentUpon>HomeScreen.cs</DependentUpon>

@@ -88,7 +88,7 @@
             this.panel1.Location = new System.Drawing.Point(32, 138);
             this.panel1.Name = "panel1";
             this.panel1.Padding = new System.Windows.Forms.Padding(10, 5, 10, 5);
-            this.panel1.Size = new System.Drawing.Size(476, 74);
+            this.panel1.Size = new System.Drawing.Size(464, 53);
             this.panel1.TabIndex = 1;
             // 
             // usernameTxt
@@ -97,10 +97,10 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.usernameTxt.BackColor = System.Drawing.Color.White;
             this.usernameTxt.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.usernameTxt.Font = new System.Drawing.Font("Ubuntu Mono", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.usernameTxt.Location = new System.Drawing.Point(24, 17);
+            this.usernameTxt.Font = new System.Drawing.Font("Ubuntu Mono", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.usernameTxt.Location = new System.Drawing.Point(12, 8);
             this.usernameTxt.Name = "usernameTxt";
-            this.usernameTxt.Size = new System.Drawing.Size(439, 40);
+            this.usernameTxt.Size = new System.Drawing.Size(427, 34);
             this.usernameTxt.TabIndex = 0;
             // 
             // panel2
@@ -112,7 +112,7 @@
             this.panel2.Location = new System.Drawing.Point(32, 266);
             this.panel2.Name = "panel2";
             this.panel2.Padding = new System.Windows.Forms.Padding(10, 5, 10, 5);
-            this.panel2.Size = new System.Drawing.Size(476, 74);
+            this.panel2.Size = new System.Drawing.Size(464, 53);
             this.panel2.TabIndex = 2;
             // 
             // passwordTxt
@@ -121,10 +121,10 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.passwordTxt.BackColor = System.Drawing.Color.White;
             this.passwordTxt.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.passwordTxt.Font = new System.Drawing.Font("Ubuntu Mono", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.passwordTxt.Location = new System.Drawing.Point(24, 17);
+            this.passwordTxt.Font = new System.Drawing.Font("Ubuntu Mono", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.passwordTxt.Location = new System.Drawing.Point(12, 11);
             this.passwordTxt.Name = "passwordTxt";
-            this.passwordTxt.Size = new System.Drawing.Size(439, 40);
+            this.passwordTxt.Size = new System.Drawing.Size(427, 34);
             this.passwordTxt.TabIndex = 0;
             // 
             // loginBtn
@@ -163,7 +163,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Century Gothic", 14F);
-            this.label4.Location = new System.Drawing.Point(27, 365);
+            this.label4.Location = new System.Drawing.Point(27, 371);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(117, 30);
             this.label4.TabIndex = 0;
@@ -172,9 +172,10 @@
             // clientRadioBtn
             // 
             this.clientRadioBtn.AutoSize = true;
-            this.clientRadioBtn.Location = new System.Drawing.Point(150, 373);
+            this.clientRadioBtn.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.clientRadioBtn.Location = new System.Drawing.Point(167, 373);
             this.clientRadioBtn.Name = "clientRadioBtn";
-            this.clientRadioBtn.Size = new System.Drawing.Size(61, 20);
+            this.clientRadioBtn.Size = new System.Drawing.Size(87, 27);
             this.clientRadioBtn.TabIndex = 4;
             this.clientRadioBtn.TabStop = true;
             this.clientRadioBtn.Text = "Client";
@@ -183,9 +184,10 @@
             // administratorRadioBtn
             // 
             this.administratorRadioBtn.AutoSize = true;
-            this.administratorRadioBtn.Location = new System.Drawing.Point(244, 373);
+            this.administratorRadioBtn.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.administratorRadioBtn.Location = new System.Drawing.Point(294, 374);
             this.administratorRadioBtn.Name = "administratorRadioBtn";
-            this.administratorRadioBtn.Size = new System.Drawing.Size(106, 20);
+            this.administratorRadioBtn.Size = new System.Drawing.Size(158, 27);
             this.administratorRadioBtn.TabIndex = 4;
             this.administratorRadioBtn.TabStop = true;
             this.administratorRadioBtn.Text = "Administrator";
