@@ -17,7 +17,7 @@ namespace Winform_Final.Interfaces.Client_Interface
         Client user;
         BSBill billDatabase = new BSBill();
         DataSet dataset;
-        DataTable dataOrder;
+        DataTable dataOrderTable;
         public Client_HistoryOrdering(string username)
         {
             InitializeComponent();
@@ -32,16 +32,15 @@ namespace Winform_Final.Interfaces.Client_Interface
         }
         public void loadData()
         {
-            dataOrder = new DataTable();
-            dataOrder.Clear();
+            dataOrderTable = new DataTable();
+            dataOrderTable.Clear();
 
-            dataset = billDatabase.getBills_baseOnCUser(user.getID());
+            dataset = billDatabase.getBills_baseOnUser(user.getID());
 
-            dataOrder = dataset.Tables[0];
-            orderGridView.DataSource = dataOrder;
+            dataOrderTable = dataset.Tables[0];
+            orderGridView.DataSource = dataOrderTable;
             orderGridView.AutoResizeColumns();
         }
-
         private void button1_Click(object sender, EventArgs e)
         {
             loadData();

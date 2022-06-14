@@ -18,6 +18,9 @@ namespace Winform_Final.Interfaces.Administrator_Interfaces
         BSBill billDatabase = new BSBill();
         DataSet billData;
 
+        string err = "Error";
+        int totalIncome = 0;
+
         DataTable clientTable;
         DataTable billTable;
 
@@ -48,11 +51,50 @@ namespace Winform_Final.Interfaces.Administrator_Interfaces
             orderGridView.AutoResizeColumns();
             userGridView.AutoResizeColumns();
 
+            totalIncome = calculateTotalIncome();
+            totalIIncomeLB.Text = totalIncome.ToString();
         }
 
         private void Statistic_Load(object sender, EventArgs e)
         {
             LoadData();
+            
+        }
+
+        private void deleteUserBtn_Click(object sender, EventArgs e)
+        {
+            int selectedIndex = userGridView.CurrentCell.RowIndex;
+            string clientID = userGridView.Rows[selectedIndex].Cells["userID"].Value.ToString();
+
+            DialogResult traloi;
+            // Hiện hộp thoại hỏi đáp 
+            traloi = MessageBox.Show("Confirm Deleting User Account !", "Trả lời",
+            MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (traloi == DialogResult.Yes)
+            {
+                clientDatabase.deletingProduct(ref err, clientID);
+                billDatabase.deletingBill_basedOnUser(ref err, clientID);
+                // Cập nhật lại DataGridView 
+                LoadData();
+                // Thông báo 
+                MessageBox.Show("Product has been deleted!");
+            }
+            else
+            {
+                // Thông báo 
+                MessageBox.Show("Cancel deleting..!");
+            }
+        }
+
+        private int calculateTotalIncome()
+        {
+            int total = 0;
+            foreach(DataGridViewRow orderRow in orderGridView.Rows)
+            {
+                total += Convert.ToInt32(orderRow.Cells["totalPrice"].Value);
+            }
+            return total;
         }
     }
 }

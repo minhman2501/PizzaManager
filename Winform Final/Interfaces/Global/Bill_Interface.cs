@@ -73,6 +73,7 @@ namespace Winform_Final.Interfaces.Global
         private void Bill_Interface_Load(object sender, EventArgs e)
         {
             LoadBill();
+            MessageBox.Show(this.buyingUser.getID().ToString());
         }
         private void getBillContent(string itemContent)
         {
@@ -84,9 +85,16 @@ namespace Winform_Final.Interfaces.Global
             isValid = validate();
             if (isValid)
             {
-                billDatabase = new BSBill();
-                billDatabase.addingBill(buyingUser.getID().ToString(), total_priceLB.Text, billContent, clientAddressTxt.Text, invoiceDateDTP.Text, ref err);
-                orderingStatus = "Succesfully Odered! Have a nice meal";
+                try
+                {
+                    billDatabase = new BSBill();
+                    billDatabase.addingBill(buyingUser.getID().ToString(), total_priceLB.Text.Trim(), billContent, clientAddressTxt.Text, invoiceDateDTP.Text, ref err);
+                    orderingStatus = "Succesfully Odered! Have a nice meal";
+                }
+                catch(SqlException)
+                {
+                    orderingStatus = "Bug";
+                }
             }
             MessageBox.Show(orderingStatus);
         }

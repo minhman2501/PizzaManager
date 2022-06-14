@@ -49,5 +49,10 @@ namespace Winform_Final.Business_Layers
             string sqlString = "Insert Into PRODUCT Values(" + "N'" + name + "','" + Convert.ToInt32(price) + "','" + category + "')";
             return db.MyExecuteNonQuery(sqlString, CommandType.Text, ref err);
         }
+        public bool deletingProduct(ref string err, string productID)
+        {
+            string sqlString = "Delete From PRODUCT Where ID='" + Convert.ToInt32(productID) + "'";
+            return db.MyExecuteNonQuery(sqlString, CommandType.Text, ref err);
+        }
     }
 }

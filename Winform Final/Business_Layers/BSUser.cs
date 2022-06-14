@@ -39,6 +39,11 @@ namespace Winform_Final.Business_Layers
         {
             return db.ExecuteQueryDataSet("select * from ACCOUNT where username='"+username+"'", CommandType.Text);
         }
+        public bool deletingProduct(ref string err, string clientID)
+        {
+            string sqlString = "Delete From ACCOUNT Where userID='" + Convert.ToInt32(clientID) + "'";
+            return db.MyExecuteNonQuery(sqlString, CommandType.Text, ref err);
+        }
 
 
     }
