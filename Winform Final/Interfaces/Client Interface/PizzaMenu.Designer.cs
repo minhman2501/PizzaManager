@@ -217,7 +217,7 @@
             // 
             this.Welcome.AutoSize = true;
             this.Welcome.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Welcome.Location = new System.Drawing.Point(221, 27);
+            this.Welcome.Location = new System.Drawing.Point(172, 30);
             this.Welcome.Name = "Welcome";
             this.Welcome.Size = new System.Drawing.Size(89, 21);
             this.Welcome.TabIndex = 6;
@@ -226,10 +226,10 @@
             // userFullNameTxt
             // 
             this.userFullNameTxt.AutoSize = true;
-            this.userFullNameTxt.Font = new System.Drawing.Font("Century Gothic", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.userFullNameTxt.Location = new System.Drawing.Point(316, 13);
+            this.userFullNameTxt.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.userFullNameTxt.Location = new System.Drawing.Point(260, 22);
             this.userFullNameTxt.Name = "userFullNameTxt";
-            this.userFullNameTxt.Size = new System.Drawing.Size(202, 40);
+            this.userFullNameTxt.Size = new System.Drawing.Size(152, 31);
             this.userFullNameTxt.TabIndex = 6;
             this.userFullNameTxt.Text = "[username]";
             // 

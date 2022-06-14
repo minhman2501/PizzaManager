@@ -22,13 +22,18 @@ namespace Winform_Final.Business_Layers
         {
             return db.ExecuteQueryDataSet("select * from BILLDETAIL", CommandType.Text);
         }
-        public DataSet getBills_baseOnCUser(int userId)
+        public DataSet getBills_baseOnUser(int userId)
         {
-            return db.ExecuteQueryDataSet("select * from BILLDETAIL where clientID='" + userId + "'", CommandType.Text);
+            return db.ExecuteQueryDataSet("select * from BILLDETAIL where clientID=" + userId +"", CommandType.Text);
         }
         public bool addingBill(string userID, string totalPrice, string content, string address, string date, ref string err)
         {
-            string sqlString = "Insert Into BILLDETAIL Values(" + "'" + Convert.ToInt32(userID) + "','" + Convert.ToInt32(totalPrice) + "',N'" + content + "',N'" + address + "','" + date + "')";
+            string sqlString = "Insert Into BILLDETAIL Values(" + Convert.ToInt32(userID) + "," + Convert.ToInt32(totalPrice) + ",N'" + content + "',N'" + address + "','" + date + "')";
+            return db.MyExecuteNonQuery(sqlString, CommandType.Text, ref err);
+        }
+        public bool deletingBill_basedOnUser(ref string err, string clientID)
+        {
+            string sqlString = "Delete From BILLDETAIL Where clientID=" + Convert.ToInt32(clientID) + "";
             return db.MyExecuteNonQuery(sqlString, CommandType.Text, ref err);
         }
     }

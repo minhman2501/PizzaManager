@@ -35,6 +35,9 @@
             this.deleteUserBtn = new System.Windows.Forms.Button();
             this.userGridView = new System.Windows.Forms.DataGridView();
             this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.totalIIncomeLB = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.orderGridView)).BeginInit();
             this.panel2.SuspendLayout();
@@ -48,6 +51,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(215)))), ((int)(((byte)(235)))));
             this.panel1.Controls.Add(this.orderGridView);
+            this.panel1.Controls.Add(this.totalIIncomeLB);
+            this.panel1.Controls.Add(this.label4);
+            this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(12, 12);
             this.panel1.Name = "panel1";
@@ -140,10 +146,45 @@
             this.label2.Text = "Registered Users";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(98)))), ((int)(((byte)(132)))));
+            this.label3.Location = new System.Drawing.Point(512, 22);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(158, 27);
+            this.label3.TabIndex = 0;
+            this.label3.Text = "Total Income";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // totalIIncomeLB
+            // 
+            this.totalIIncomeLB.AutoSize = true;
+            this.totalIIncomeLB.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.totalIIncomeLB.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(98)))), ((int)(((byte)(132)))));
+            this.totalIIncomeLB.Location = new System.Drawing.Point(701, 22);
+            this.totalIIncomeLB.Name = "totalIIncomeLB";
+            this.totalIIncomeLB.Size = new System.Drawing.Size(132, 27);
+            this.totalIIncomeLB.TabIndex = 0;
+            this.totalIIncomeLB.Text = "[insertotal]";
+            this.totalIIncomeLB.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(98)))), ((int)(((byte)(132)))));
+            this.label4.Location = new System.Drawing.Point(839, 30);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(40, 19);
+            this.label4.TabIndex = 0;
+            this.label4.Text = "vnd";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // Statistic
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1067, 656);
             this.Controls.Add(this.panel2);
@@ -171,5 +212,8 @@
         private System.Windows.Forms.DataGridView userGridView;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button deleteUserBtn;
+        private System.Windows.Forms.Label totalIIncomeLB;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
     }
 }
