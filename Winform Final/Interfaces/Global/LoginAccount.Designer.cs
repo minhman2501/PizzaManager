@@ -124,6 +124,7 @@
             this.passwordTxt.Font = new System.Drawing.Font("Ubuntu Mono", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.passwordTxt.Location = new System.Drawing.Point(12, 11);
             this.passwordTxt.Name = "passwordTxt";
+            this.passwordTxt.PasswordChar = '*';
             this.passwordTxt.Size = new System.Drawing.Size(427, 34);
             this.passwordTxt.TabIndex = 0;
             // 
