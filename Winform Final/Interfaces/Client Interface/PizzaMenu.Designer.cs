@@ -37,6 +37,7 @@
             this.PizzaListBtn = new System.Windows.Forms.Button();
             this.DrinkListBtn = new System.Windows.Forms.Button();
             this.menuPanel = new System.Windows.Forms.Panel();
+            this.allProductBtn = new System.Windows.Forms.Button();
             this.foodListPanel = new System.Windows.Forms.Panel();
             this.foodGridView = new System.Windows.Forms.DataGridView();
             this.select = new System.Windows.Forms.DataGridViewCheckBoxColumn();
@@ -53,7 +54,6 @@
             this.cart_itemCategory = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cart_itemAmount = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cart_itemPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.allProductBtn = new System.Windows.Forms.Button();
             this.menuPanel.SuspendLayout();
             this.foodListPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.foodGridView)).BeginInit();
@@ -114,6 +114,19 @@
             this.menuPanel.Size = new System.Drawing.Size(1232, 725);
             this.menuPanel.TabIndex = 1;
             // 
+            // allProductBtn
+            // 
+            this.allProductBtn.BackColor = System.Drawing.Color.White;
+            this.allProductBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.allProductBtn.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.allProductBtn.Location = new System.Drawing.Point(308, 148);
+            this.allProductBtn.Name = "allProductBtn";
+            this.allProductBtn.Size = new System.Drawing.Size(134, 49);
+            this.allProductBtn.TabIndex = 6;
+            this.allProductBtn.Text = "All";
+            this.allProductBtn.UseVisualStyleBackColor = false;
+            this.allProductBtn.Click += new System.EventHandler(this.allProductBtn_Click);
+            // 
             // foodListPanel
             // 
             this.foodListPanel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -161,8 +174,6 @@
             this.foodGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.foodGridView.Size = new System.Drawing.Size(632, 410);
             this.foodGridView.TabIndex = 5;
-            this.foodGridView.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.foodGridView_CellContentDoubleClick);
-            this.foodGridView.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.foodGridView_CellDoubleClick);
             this.foodGridView.MouseClick += new System.Windows.Forms.MouseEventHandler(this.foodGridView_MouseClick);
             // 
             // select
@@ -329,7 +340,7 @@
             this.cartGridView.Cursor = System.Windows.Forms.Cursors.Hand;
             dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle5.ForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
@@ -373,19 +384,6 @@
             this.cart_itemPrice.Name = "cart_itemPrice";
             this.cart_itemPrice.ReadOnly = true;
             this.cart_itemPrice.Width = 125;
-            // 
-            // allProductBtn
-            // 
-            this.allProductBtn.BackColor = System.Drawing.Color.White;
-            this.allProductBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.allProductBtn.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.allProductBtn.Location = new System.Drawing.Point(308, 148);
-            this.allProductBtn.Name = "allProductBtn";
-            this.allProductBtn.Size = new System.Drawing.Size(134, 49);
-            this.allProductBtn.TabIndex = 6;
-            this.allProductBtn.Text = "All";
-            this.allProductBtn.UseVisualStyleBackColor = false;
-            this.allProductBtn.Click += new System.EventHandler(this.allProductBtn_Click);
             // 
             // PizzaMenu
             // 

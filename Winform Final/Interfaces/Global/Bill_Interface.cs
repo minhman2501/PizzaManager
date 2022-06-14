@@ -73,15 +73,16 @@ namespace Winform_Final.Interfaces.Global
         private void Bill_Interface_Load(object sender, EventArgs e)
         {
             LoadBill();
-            MessageBox.Show(this.buyingUser.getID().ToString());
         }
         private void getBillContent(string itemContent)
         {
-            this.billContent = this.billContent + $"{itemContent}" + "\t";
+            this.billContent = this.billContent + $"{itemContent}    " ;
         }
 
         private void confirmBtn_Click(object sender, EventArgs e)
         {
+
+            bool isDone = false;
             isValid = validate();
             if (isValid)
             {
@@ -90,6 +91,7 @@ namespace Winform_Final.Interfaces.Global
                     billDatabase = new BSBill();
                     billDatabase.addingBill(buyingUser.getID().ToString(), total_priceLB.Text.Trim(), billContent, clientAddressTxt.Text, invoiceDateDTP.Text, ref err);
                     orderingStatus = "Succesfully Odered! Have a nice meal";
+                    isDone = true;
                 }
                 catch(SqlException)
                 {
@@ -97,6 +99,7 @@ namespace Winform_Final.Interfaces.Global
                 }
             }
             MessageBox.Show(orderingStatus);
+            if (isDone) this.Close();
         }
         private bool validate()
         {

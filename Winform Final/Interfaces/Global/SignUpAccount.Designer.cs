@@ -163,6 +163,7 @@
             this.reenterTxt.Font = new System.Drawing.Font("Ubuntu Mono", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.reenterTxt.Location = new System.Drawing.Point(13, 10);
             this.reenterTxt.Name = "reenterTxt";
+            this.reenterTxt.PasswordChar = '*';
             this.reenterTxt.Size = new System.Drawing.Size(490, 27);
             this.reenterTxt.TabIndex = 0;
             // 
@@ -185,6 +186,7 @@
             this.signUp_passwordTxt.Font = new System.Drawing.Font("Ubuntu Mono", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.signUp_passwordTxt.Location = new System.Drawing.Point(13, 8);
             this.signUp_passwordTxt.Name = "signUp_passwordTxt";
+            this.signUp_passwordTxt.PasswordChar = '*';
             this.signUp_passwordTxt.Size = new System.Drawing.Size(489, 27);
             this.signUp_passwordTxt.TabIndex = 0;
             this.signUp_passwordTxt.Leave += new System.EventHandler(this.signUp_passwordTxt_Leave);

@@ -24,8 +24,7 @@ namespace Winform_Final.Client_Interface
 
         BSProduct productDatbase = new BSProduct();
         DataSet dataset;
-        
-
+       
         public PizzaMenu()
         {
             InitializeComponent();
@@ -35,7 +34,6 @@ namespace Winform_Final.Client_Interface
             InitializeComponent();
             user = new Client(username);
         }
-
         private void LoadData()
         {
             try
@@ -62,15 +60,7 @@ namespace Winform_Final.Client_Interface
         {
             LoadData();
         }
-        private void foodGridView_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void foodGridView_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
+        
         private void foodGridView_MouseClick(object sender, MouseEventArgs e)
         {
             int selectedIndex = foodGridView.CurrentCell.RowIndex;
