@@ -29,6 +29,8 @@ namespace Winform_Final
         {
             userHome = new HomeScreen() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
             menu = new PizzaMenu(this.username) { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
+            orderHistory = new Client_HistoryOrdering(this.username) { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
+            this.wrapperPanel.Controls.Add(orderHistory);
             this.wrapperPanel.Controls.Add(userHome);
             this.wrapperPanel.Controls.Add(menu);
             userHome.Show();
@@ -55,8 +57,6 @@ namespace Winform_Final
 
         private void buyHistoryBtn_Click(object sender, EventArgs e)
         {
-            orderHistory = new Client_HistoryOrdering(this.username) { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
-            this.wrapperPanel.Controls.Add(orderHistory);
             orderHistory.loadData();
             orderHistory.Show();
             userHome.Hide();

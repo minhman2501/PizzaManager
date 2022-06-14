@@ -53,6 +53,7 @@
             this.cart_itemCategory = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cart_itemAmount = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cart_itemPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.allProductBtn = new System.Windows.Forms.Button();
             this.menuPanel.SuspendLayout();
             this.foodListPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.foodGridView)).BeginInit();
@@ -100,6 +101,7 @@
             // menuPanel
             // 
             this.menuPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(228)))), ((int)(((byte)(252)))), ((int)(((byte)(197)))));
+            this.menuPanel.Controls.Add(this.allProductBtn);
             this.menuPanel.Controls.Add(this.foodListPanel);
             this.menuPanel.Controls.Add(this.cartPanel);
             this.menuPanel.Controls.Add(this.DrinkListBtn);
@@ -372,6 +374,19 @@
             this.cart_itemPrice.ReadOnly = true;
             this.cart_itemPrice.Width = 125;
             // 
+            // allProductBtn
+            // 
+            this.allProductBtn.BackColor = System.Drawing.Color.White;
+            this.allProductBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.allProductBtn.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.allProductBtn.Location = new System.Drawing.Point(308, 148);
+            this.allProductBtn.Name = "allProductBtn";
+            this.allProductBtn.Size = new System.Drawing.Size(134, 49);
+            this.allProductBtn.TabIndex = 6;
+            this.allProductBtn.Text = "All";
+            this.allProductBtn.UseVisualStyleBackColor = false;
+            this.allProductBtn.Click += new System.EventHandler(this.allProductBtn_Click);
+            // 
             // PizzaMenu
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -414,5 +429,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn cart_itemPrice;
         private System.Windows.Forms.Label userFullNameTxt;
         private System.Windows.Forms.Label Welcome;
+        private System.Windows.Forms.Button allProductBtn;
     }
 }

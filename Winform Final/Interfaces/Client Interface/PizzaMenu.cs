@@ -167,5 +167,13 @@ namespace Winform_Final.Client_Interface
             Bill_Interface bill = new Bill_Interface(itemList, this.user);
             bill.Show();
         }
+
+        private void allProductBtn_Click(object sender, EventArgs e)
+        {
+            dataset = productDatbase.getProducts();
+            dtProduct = dataset.Tables[0];
+            foodGridView.DataSource = dtProduct;
+            foodGridView.AutoResizeColumns();
+        }
     }
 }
