@@ -21,7 +21,7 @@ namespace Winform_Final
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Statistic());
+            Application.Run(new LoginAccount());
         }
     }
 }

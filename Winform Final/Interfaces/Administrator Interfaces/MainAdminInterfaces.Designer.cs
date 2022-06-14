@@ -30,7 +30,7 @@
         {
             this.sideBarPanel = new System.Windows.Forms.Panel();
             this.iconButton1 = new FontAwesome.Sharp.IconButton();
-            this.MenuBtn = new FontAwesome.Sharp.IconButton();
+            this.statisticsBtn = new FontAwesome.Sharp.IconButton();
             this.foodManageBtn = new FontAwesome.Sharp.IconButton();
             this.contentPanel = new System.Windows.Forms.Panel();
             this.sideBarPanel.SuspendLayout();
@@ -40,7 +40,7 @@
             // 
             this.sideBarPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(87)))), ((int)(((byte)(122)))));
             this.sideBarPanel.Controls.Add(this.iconButton1);
-            this.sideBarPanel.Controls.Add(this.MenuBtn);
+            this.sideBarPanel.Controls.Add(this.statisticsBtn);
             this.sideBarPanel.Controls.Add(this.foodManageBtn);
             this.sideBarPanel.Dock = System.Windows.Forms.DockStyle.Left;
             this.sideBarPanel.Location = new System.Drawing.Point(0, 0);
@@ -71,27 +71,28 @@
             this.iconButton1.UseVisualStyleBackColor = true;
             this.iconButton1.Click += new System.EventHandler(this.iconButton1_Click);
             // 
-            // MenuBtn
+            // statisticsBtn
             // 
-            this.MenuBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.MenuBtn.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.MenuBtn.FlatAppearance.BorderSize = 0;
-            this.MenuBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.MenuBtn.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MenuBtn.ForeColor = System.Drawing.Color.White;
-            this.MenuBtn.IconChar = FontAwesome.Sharp.IconChar.Th;
-            this.MenuBtn.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(255)))), ((int)(((byte)(235)))));
-            this.MenuBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.MenuBtn.IconSize = 40;
-            this.MenuBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.MenuBtn.Location = new System.Drawing.Point(0, 204);
-            this.MenuBtn.Name = "MenuBtn";
-            this.MenuBtn.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
-            this.MenuBtn.Size = new System.Drawing.Size(253, 66);
-            this.MenuBtn.TabIndex = 2;
-            this.MenuBtn.Text = "Statistic";
-            this.MenuBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.MenuBtn.UseVisualStyleBackColor = true;
+            this.statisticsBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.statisticsBtn.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.statisticsBtn.FlatAppearance.BorderSize = 0;
+            this.statisticsBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.statisticsBtn.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.statisticsBtn.ForeColor = System.Drawing.Color.White;
+            this.statisticsBtn.IconChar = FontAwesome.Sharp.IconChar.Th;
+            this.statisticsBtn.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(255)))), ((int)(((byte)(235)))));
+            this.statisticsBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.statisticsBtn.IconSize = 40;
+            this.statisticsBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.statisticsBtn.Location = new System.Drawing.Point(0, 204);
+            this.statisticsBtn.Name = "statisticsBtn";
+            this.statisticsBtn.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
+            this.statisticsBtn.Size = new System.Drawing.Size(253, 66);
+            this.statisticsBtn.TabIndex = 2;
+            this.statisticsBtn.Text = "Statistic";
+            this.statisticsBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.statisticsBtn.UseVisualStyleBackColor = true;
+            this.statisticsBtn.Click += new System.EventHandler(this.statisticsBtn_Click);
             // 
             // foodManageBtn
             // 
@@ -115,6 +116,7 @@
             this.foodManageBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.foodManageBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.foodManageBtn.UseVisualStyleBackColor = true;
+            this.foodManageBtn.Click += new System.EventHandler(this.foodManageBtn_Click);
             // 
             // contentPanel
             // 
@@ -142,7 +144,7 @@
 
         private System.Windows.Forms.Panel sideBarPanel;
         private FontAwesome.Sharp.IconButton iconButton1;
-        private FontAwesome.Sharp.IconButton MenuBtn;
+        private FontAwesome.Sharp.IconButton statisticsBtn;
         private FontAwesome.Sharp.IconButton foodManageBtn;
         private System.Windows.Forms.Panel contentPanel;
     }

@@ -154,5 +154,30 @@ namespace Winform_Final.Administrator_Interfaces
         {
             isChange = true;
         }
+
+        private void deleteBtn_Click(object sender, EventArgs e)
+        {
+            int selectedIndex = productGridView.CurrentCell.RowIndex;
+            string productID = productGridView.Rows[selectedIndex].Cells["ID"].Value.ToString();
+
+            DialogResult traloi;
+            // Hiện hộp thoại hỏi đáp 
+            traloi = MessageBox.Show("Confirm Deleting Product", "Trả lời",
+            MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (traloi == DialogResult.Yes)
+            {
+                productDatbase.deletingProduct(ref err, productID);
+                // Cập nhật lại DataGridView 
+                LoadData();
+                // Thông báo 
+                MessageBox.Show("Product has been deleted!");
+            }
+            else
+            {
+                // Thông báo 
+                MessageBox.Show("Cancel deleting..!");
+            }
+        }
     }
 }
